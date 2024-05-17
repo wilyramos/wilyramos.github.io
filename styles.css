@@ -17,7 +17,7 @@ body {
 
 /* Estilos del encabezado */
 header {
-    background: #333;
+    background: #76eaff;
     color: #fff;
     padding: 10px 0;
     text-align: center;
@@ -25,7 +25,7 @@ header {
 
 /* Estilos de navegación */
 nav {
-    background: #444;
+    background: #50b9ff;
     color: #fff;
     padding: 10px 0;
 }
