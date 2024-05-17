@@ -14,10 +14,17 @@ body {
     background-color: #f4f4f4;
     color: #333;
 }
-
+.cabecera {
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
 /* Estilos del encabezado */
 header {
-    background: #76eaff;
+    background: #428dff;
     color: #fff;
     padding: 10px 0;
     text-align: center;
@@ -25,7 +32,7 @@ header {
 
 /* Estilos de navegación */
 nav {
-    background: #50b9ff;
+    background: #415dfd;
     color: #fff;
     padding: 10px 0;
 }
