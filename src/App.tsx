@@ -8,7 +8,7 @@ export default function App() {
     <>
       <div className="h-screen flex flex-col">
         <Navbar />
-        <div className="flex">
+        <div className="flex justify-between items-center">
           <HeroSection />
         </div>
       </div>
