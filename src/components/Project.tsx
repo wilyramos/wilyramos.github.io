@@ -1,12 +1,9 @@
 import ProjectCard from './ProjectCard';
 
 const projects = [
-  { title: 'Proyecto 1', description: 'Descripción del proyecto 1.', imageUrl: '/path-to-image1.jpg', link: 'https://proyecto1.com' },
-  { title: 'Proyecto 2', description: 'Descripción del proyecto 2.', imageUrl: '/path-to-image2.jpg', link: 'https://proyecto2.com' },
-  { title: 'Proyecto 3', description: 'Descripción del proyecto 3.', imageUrl: '/path-to-image3.jpg', link: 'https://proyecto3.com' },
-  { title: 'Proyecto 4', description: 'Descripción del proyecto 4.', imageUrl: '/path-to-image4.jpg', link: 'https://proyecto4.com' },
-  { title: 'Proyecto 5', description: 'Descripción del proyecto 5.', imageUrl: '/path-to-image5.jpg', link: 'https://proyecto5.com' },
-  { title: 'Proyecto 6', description: 'Descripción del proyecto 6.', imageUrl: '/path-to-image6.jpg', link: 'https://proyecto6.com' },
+  { title: 'VisitCañete', description: 'Página web de turismo de la provincia de Cañete', imageUrl: '/4.svg', link: 'https://visitcanete.com' },
+  { title: 'Calculator', description: 'Calculadora web con operaciones básicas', imageUrl: '/5.svg', link: 'https://carwashcalculator.vercel.app/' },
+  { title: 'MyProject', description: 'Proyecto personal para mostrar habilidades', imageUrl: '/5.svg', link: 'https://mitask.vercel.app/' },
 ];
 
 export default function Projects() {

@@ -1,23 +1,23 @@
 interface ProjectCardProps {
-    title: string;
-    description: string;
-    imageUrl: string;
-    link: string;
-  }
-  
-  export default function ProjectCard({ title, description, imageUrl, link }: ProjectCardProps) {
-    return (
-  <div className="bg-white shadow-md rounded-lg flex flex-col items-center">
-    <img src={imageUrl} alt={title} className="w-full h-32 object-cover" />
-    <div className="p-4 text-center">
-      <h3 className="text-xl font-semibold">{title}</h3>
-      <p className="mt-2 text-gray-600">{description}</p>
-      <a href={link} target="_blank" rel="noopener noreferrer" className="block mt-4 text-blue-600 hover:underline">
-        Ver proyecto
-      </a>
-    </div>
-  </div>
+  title: string;
+  description: string;
+  imageUrl: string;
+  link: string;
+}
 
-    );
-  }
-  
+export default function ProjectCard({ title, description, imageUrl, link }: ProjectCardProps) {
+  return (
+    <div className="relative bg-white shadow-md rounded-xl overflow-hidden border-t-4 border-indigo-500">
+      <img src={imageUrl} alt={title} className="w-full h-42 object-cover" />
+      <div className="absolute inset-0 flex flex-col justify-center bg-black bg-opacity-50 text-white p-4 text-right">
+        <h3 className="text-xl font-semibold">{title}</h3>
+        <p className="mt-1">{description}</p>
+        <a href={link} target="" rel="" className="px-2 py-1 mt-auto text-sm bg-transparent text-whit rounded hover:bg-blue-600 transition text-left">
+          Ver proyecto
+        </a>
+      </div>
+    </div>
+
+
+  );
+}
