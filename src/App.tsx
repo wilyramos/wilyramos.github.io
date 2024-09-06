@@ -1,7 +1,7 @@
 import './App.css'
 import Navbar from './components/Navbar'
 import HeroSection from './components/HeroSection'
-import Footer from './components/Footer'
+import FooterSection from './components/FooterSection'
 
 
 
@@ -13,7 +13,7 @@ export default function App() {
         <div className="flex justify-between items-center">
           <HeroSection />
         </div>
-        <Footer />
+        <FooterSection />
       </div>
     </>
   );
