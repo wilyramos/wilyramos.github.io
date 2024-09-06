@@ -8,7 +8,7 @@ const projects = [
 
 export default function Projects() {
   return (
-<section id="projects" className="py-12 bg-gradient-to-r  to-gray-950 from-blue-950 rounded-xl">
+<section id="projects" className="py-10 bg-gradient-to-r  to-gray-950 from-blue-950 rounded-xl ">
   <div className="container mx-auto px-6">
     <div className="grid gap-3 sm:grid-cols-1 lg:grid-cols-2 place-items-center">
       {projects.map((project, index) => (

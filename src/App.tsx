@@ -8,10 +8,10 @@ import FooterSection from './components/FooterSection'
 export default function App() {
   return (
     <>
-      <div className="h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col">
         <Navbar />
-        <div className="flex justify-between items-center">
-          <HeroSection />
+        <div className="flex-grow flex justify-between items-center">
+        <HeroSection />
         </div>
         <FooterSection />
       </div>
