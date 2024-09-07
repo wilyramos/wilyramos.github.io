@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Projects from './Project';
+import Skills from './Skills';
 
 export default function HeroSection() {
   const roles = ["Wily", "Developer", "Ingeniero", "Programador"];
@@ -32,15 +33,28 @@ export default function HeroSection() {
   }, [text, isDeleting]);
 
   return (
-    <section className="flex h-auto w-full p-10 items-center bg-gradient-to-r from-blue-950 to-gray-950">
-      <div className="w-1/3">
-        <h1 className="text-3xl lg:text-5xl font-bold text-gray-200 mb-4">Hola, {text}</h1>
-        <p className="text-gray-300 text-lg">Soy ingeniero de sistemas de la UNMSM, full stack Developer</p>
-      </div>
+    <>
+        <section className="flex h-auto w-full items-center bg-gradient-to-r from-blue-950 to-gray-950">
+        <div className="w-1/3">
+          <h1 className="text-3xl lg:text-5xl font-bold text-gray-200 mb-4">Hola, {text}</h1>
+          <p className="text-gray-300 text-lg">Soy ingeniero de sistemas de la UNMSM, full stack Developer</p>
+        </div>
+        <div className="w-2/3 min-h-screen flex p-2 items-center ">
+          <Projects />
+        </div>
+      </section>
 
-      <div className="w-2/3 text-center">
-        <Projects />
-      </div>
-    </section>
+      <section className="flex h-auto items-center bg-gradient-to-r from-blue-950 to-gray-950">
+        
+        <Skills />
+
+        
+          
+        
+      </section>
+    
+    
+    </>
+
   );
 }
