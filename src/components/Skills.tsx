@@ -1,4 +1,4 @@
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaDocker, FaAws, FaGit, FaDatabase } from 'react-icons/fa';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaDocker, FaAws, FaGit, FaDatabase, FaGithub, FaMicrosoft } from 'react-icons/fa';
 
 const skills = {
     frontend: [
@@ -16,11 +16,11 @@ const skills = {
     ],
     deployment: [
         { name: 'Git', icon: <FaGit /> },
-        { name: 'AWS', icon: <FaAws /> },
+        { name: 'Github', icon: <FaGithub />},
         { name: 'Docker', icon: <FaDocker /> },
-        // { name: 'Postman', icon: <FaPostman /> }
+        
     ],
-
+    
 
 };
 
@@ -30,14 +30,14 @@ export default function Skills() {
         <>
             <section id="skills" className="w-full py-2 text-white ">
                 <div className="container mx-auto px-2">
-                    <div className="grid grid-cols-1 gap-2">
+                    <div className="grid grid-cols-1 gap-2 text-center">
                         {Object.entries(skills).map(([category, items]) => (
-                            <div key={category} className="bg-gray-800 rounded-lg p-4 shadow-md">
-                                <h2 className="text-lg font-light mb-4">{category}</h2>
+                            <div key={category} className="bg-gray-800 rounded-xl p-4 shadow-md">
+                                <h2 className="text-lg font-bold mb-4">{category}</h2>
                                 <div className="flex flex-wrap gap-4 text-lg font-light">
                                     {items.map((skill) => (
-                                        <div key={skill.name} className="flex items-center text-xl ">
-                                            <span className="text-3xl mr-2 font-light ">{skill.icon}</span>
+                                        <div key={skill.name} className="flex items-center text-light">
+                                            <span className="text-3xl mr-2 ">{skill.icon}</span>
 
                                             {skill.name}
                                         </div>

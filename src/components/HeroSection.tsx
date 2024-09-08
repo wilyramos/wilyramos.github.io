@@ -36,18 +36,16 @@ export default function HeroSection() {
     <>
     
       <section className="flex flex-col lg:flex-row bg-gradient-to-r from-blue-950 to-gray-950 p-4">
-        {/* Información Personal */}
+
         <div className="flex-1 lg:w-1/4 p-4 flex flex-col items-center justify-center">
           <h1 className="text-3xl lg:text-5xl font-bold text-gray-200 p-10">Hola, {text}</h1>
           <p className="text-gray-300 text-lg">Soy ingeniero de sistemas de la UNMSM, full stack Developer</p>
         </div>
 
-        {/* Proyectos */}
-        <div className=" lg:w-2/4 min-h-screen flex items-center justify-center">
+        <div className=" lg:w-2/4 min-h-fit flex items-center justify-center">
           <Projects />
         </div>
 
-        {/* Habilidades */}
         <div className="flex lg:w-1/4 p-4 lex items-center justify-center lg:justify-end">
           <div className="bg-gray-950 rounded-lg p-4 w-full max-w-xs">
             <Skills />
