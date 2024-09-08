@@ -10,7 +10,7 @@ export default function Projects() {
   return (
 <section id="projects" className=" bg-gradient-to-r  to-gray-950 from-blue-950 rounded-2xl ">
   <div className="px-4 py-4 container mx-full">
-    <div className="grid gap-4 sm:grid-cols-1 lg:grid-cols-2 place-items-center">
+    <div className="grid gap-4 sm:grid-cols-2 place-items-center">
       {projects.map((project, index) => (
         <ProjectCard key={index} {...project} />
       ))}

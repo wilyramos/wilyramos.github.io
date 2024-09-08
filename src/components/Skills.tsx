@@ -1,50 +1,54 @@
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaDocker, FaAws, FaGit, FaDatabase } from 'react-icons/fa';
+
+const skills = {
+    frontend: [
+        { name: 'HTML', icon: <FaHtml5 /> },
+        { name: 'CSS', icon: <FaCss3Alt /> },
+        { name: 'JavaScript', icon: <FaJs /> },
+        { name: 'React', icon: <FaReact /> },
+        { name: 'Next.js', icon: <FaReact /> } // Reusing React icon for Next.js as an example
+    ],
+    backend: [
+        { name: 'Node.js', icon: <FaNodeJs /> },
+        { name: 'Express', icon: <FaReact /> }, // Reusing React icon for Express as an example
+        { name: 'MongoDB', icon: <FaDatabase /> },
+        { name: 'MySQL', icon: <FaDatabase /> } // Reusing Database icon for MySQL as an example
+    ],
+    deployment: [
+        { name: 'Git', icon: <FaGit /> },
+        { name: 'AWS', icon: <FaAws /> },
+        { name: 'Docker', icon: <FaDocker /> },
+        // { name: 'Postman', icon: <FaPostman /> }
+    ],
+
+
+};
 
 export default function Skills() {
-  return (
-    <>
-        <section id="skills" className="py-10 bg-gradient-to-r  to-gray-950 from-blue-950 rounded-xl ">
-            <div className="container mx-auto px-6">
-                <div className="grid gap-3 sm:grid-cols-1 lg:grid-cols-2 place-items-center">
-                    <div className="bg-gray-800 rounded-lg p-4">
-                        <h2 className="text-2xl font-bold text-white">Frontend</h2>
-                        <ul className="text-white">
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
-                            <li>React</li>
-                            <li>Next.js</li>
-                        </ul>
-                        <h2 className="text-2xl font-bold text-white">Backend</h2>
-                        <ul className="text-white">
-                            <li>Node.js</li>
-                            <li>Express</li>
-                            <li>MongoDB</li>
-                            <li>MySQL</li>
-                        </ul>
-                        <h2 className="text-2xl font-bold text-white">Frameworks</h2>
 
-                        <ul className="text-white">
-                            <li>React</li>
-                            <li>Next.js</li>
-                            <li>Express</li>
-                        </ul>
-                        
-                        <h2 className="text-2xl font-bold text-white">Databases</h2>
-                        <ul className="text-white">
-                            <li>MongoDB</li>
-                            <li>MySQL</li>
-                        </ul>
-                        <h2 className="text-2xl font-bold text-white">Deployment</h2>
-                        <ul className="text-white">
-                            <li>Git</li>
-                            <li>AWS</li>
-                            <li>Docker</li>
-                            <li>Postman</li>
-                        </ul>
+    return (
+        <>
+            <section id="skills" className="w-full py-2 text-white ">
+                <div className="container mx-auto px-2">
+                    <div className="grid grid-cols-1 gap-2">
+                        {Object.entries(skills).map(([category, items]) => (
+                            <div key={category} className="bg-gray-800 rounded-lg p-4 shadow-md">
+                                <h2 className="text-lg font-light mb-4">{category}</h2>
+                                <div className="flex flex-wrap gap-4 text-lg font-light">
+                                    {items.map((skill) => (
+                                        <div key={skill.name} className="flex items-center text-xl ">
+                                            <span className="text-3xl mr-2 font-light ">{skill.icon}</span>
+
+                                            {skill.name}
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
-            </div>
-        </section>   
-    </>
-  )
+            </section>
+
+        </>
+    )
 }

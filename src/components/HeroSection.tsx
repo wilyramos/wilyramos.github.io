@@ -34,26 +34,29 @@ export default function HeroSection() {
 
   return (
     <>
-        <section className="flex h-auto w-full items-center bg-gradient-to-r from-blue-950 to-gray-950">
-        <div className="w-1/3">
-          <h1 className="text-3xl lg:text-5xl font-bold text-gray-200 mb-4">Hola, {text}</h1>
+    
+      <section className="flex flex-col lg:flex-row bg-gradient-to-r from-blue-950 to-gray-950 p-4">
+        {/* Información Personal */}
+        <div className="flex-1 lg:w-1/4 p-4 flex flex-col items-center justify-center">
+          <h1 className="text-3xl lg:text-5xl font-bold text-gray-200 p-10">Hola, {text}</h1>
           <p className="text-gray-300 text-lg">Soy ingeniero de sistemas de la UNMSM, full stack Developer</p>
         </div>
-        <div className="w-2/3 min-h-screen flex p-2 items-center ">
+
+        {/* Proyectos */}
+        <div className=" lg:w-2/4 min-h-screen flex items-center justify-center">
           <Projects />
+        </div>
+
+        {/* Habilidades */}
+        <div className="flex lg:w-1/4 p-4 lex items-center justify-center lg:justify-end">
+          <div className="bg-gray-950 rounded-lg p-4 w-full max-w-xs">
+            <Skills />
+          </div>
         </div>
       </section>
 
-      <section className="flex h-auto items-center bg-gradient-to-r from-blue-950 to-gray-950">
-        
-        <Skills />
 
-        
-          
-        
-      </section>
-    
-    
+
     </>
 
   );
