@@ -41,7 +41,7 @@ export default function ContactForm() {
             className="w-full p-4 rounded-lg border border-gray-300 mb-4"
           />
           <button type="submit" className="w-full p-4 bg-blue-600 text-white rounded-lg hover:bg-blue-500">
-            Enviar mensaje
+            Send Message
           </button>
         </form>
       </div>
