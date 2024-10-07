@@ -1,4 +1,5 @@
-import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa"; // Ejemplo de íconos
+import { FaGithub, FaLinkedin, FaMailBulk   , FaWhatsapp } from "react-icons/fa"; // Ejemplo de íconos
+import { FaC } from "react-icons/fa6";
 
 
 export default function SocialMedia () {
@@ -18,6 +19,11 @@ export default function SocialMedia () {
       icon: <FaWhatsapp />,
       label: "WhatsApp",
     },
+    {
+      href: "wily.ramos1@unmsm.edu.pe",
+      icon: <FaMailBulk    />,
+      label: "Correo",
+    }
   ];
 
   return (
