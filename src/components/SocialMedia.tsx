@@ -1,6 +1,4 @@
 import { FaGithub, FaLinkedin, FaMailBulk   , FaWhatsapp } from "react-icons/fa"; // Ejemplo de íconos
-import { FaC } from "react-icons/fa6";
-
 
 export default function SocialMedia () {
   const socialLinks = [
