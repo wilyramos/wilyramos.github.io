@@ -19,7 +19,7 @@ export default function SocialMedia () {
     },
     {
       href: "wily.ramos1@unmsm.edu.pe",
-      icon: <FaMailBulk    />,
+      icon: <FaMailBulk />,
       label: "Correo",
     }
   ];
