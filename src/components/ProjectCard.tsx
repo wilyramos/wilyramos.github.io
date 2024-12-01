@@ -1,6 +1,6 @@
 import { FaGithub } from "react-icons/fa";
 
-type ProjectCardProps = {
+interface ProjectCardProps {
     title: string;
     description: string;
     imageUrl: string;
