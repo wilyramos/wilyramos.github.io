@@ -33,7 +33,10 @@ export default function ProjectCard({ title, description, imageUrl, link }: Proj
                         <button className="mt-2 text-white bg-indigo-900 py-2 px-4 hover:bg-indigo-600 rounded text-lg">
                             <FaGithub />
                         </button>
-                        <button className="mt-2 text-white bg-indigo-900 py-2 px-4 hover:bg-indigo-600 rounded text-lg">
+                        <button 
+                            className="mt-2 text-white bg-indigo-900 py-2 px-4 hover:bg-indigo-600 rounded text-lg"
+                            onClick={() => window.open(link, '_blank')}
+                        >
                           demo
                         </button>
                     </div>
