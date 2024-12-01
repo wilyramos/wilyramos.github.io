@@ -1,4 +1,4 @@
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaDocker, FaGit, FaDatabase, FaGithub, FaCss3, FaTshirt, FaPhp } from 'react-icons/fa';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaDocker, FaGit, FaDatabase, FaGithub, FaCss3, FaPhp } from 'react-icons/fa';
 
 const skills = {
     Frontend: [
