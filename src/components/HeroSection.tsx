@@ -30,15 +30,16 @@ export default function HeroSection() {
     }, [text, isDeleting]);
 
     return (
-        <section className="flex flex-col items-center justify-center">
+        <section className="flex flex-col justify-center items-center">
           {/* Hero Section */}
-          <div className="flex flex-col items-center justify-center mb-8">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">Hola, {text}</h1>
-            <p className="text-lg sm:text-xl max-w-xl mx-auto">Soy ingeniero de sistemas de la UNMSM y Full Stack Developer</p>
+          <div className="m-8">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-2">Hola, {text}</h1>
+            
+            <p className="text-lg sm:text-xl max-w-xl mx-auto">Soy ingeniero de sistemas de la UNMSM y Full Stack Developer.</p>
           </div>
             
           {/* Projects and Skills Section */} 
-          <div className="flex flex-col md:flex-row ">
+          <div className="flex flex-col lg:flex-row justify-center items-center w-full">
             
             {/* Projects Section */}
             <div className="w-full">
