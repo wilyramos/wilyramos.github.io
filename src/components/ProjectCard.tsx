@@ -12,7 +12,7 @@ export default function ProjectCard({ title, description, imageUrl, link }: Proj
         <>
             <section className="text-gray-600 body-font border-y-4 border-indigo-900 p-2 rounded-xl ">
                 <div>
-                    <img className="rounded-xl" alt="hero" src={imageUrl} />
+                    <img className="rounded-lg" alt="hero" src={imageUrl} />
                 </div>
 
                 <div className="">
@@ -20,7 +20,7 @@ export default function ProjectCard({ title, description, imageUrl, link }: Proj
                     <p className="text-gray-300 text-sm">{description}</p>
 
                     <div className="flex justify-between">
-                        <p className="text-sm bg-yellow-500 rounded-xl py-1 px-3">Javascript</p>
+                        <p className="text-sm bg-yellow-500 rounded-xl py-1 px-3 text-white">Javascript</p>
                         <p className="text-gray-300 text-sm bg-cyan-500 rounded-xl py-1 px-3">React</p>
                         <p className="text-gray-300 text-sm bg-blue-500 rounded-xl py-1 px-3">Tailwind</p>
                         <p className="text-gray-300 text-sm bg-green-500 rounded-xl py-1 px-3">MongoDB</p>   

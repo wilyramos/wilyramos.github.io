@@ -38,7 +38,7 @@ export default function HeroSection() {
           </div>
             
           {/* Projects and Skills Section */} 
-          <div className="flex flex-col md:flex-row md:justify-between mb-8">
+          <div className="flex flex-col md:flex-row ">
             
             {/* Projects Section */}
             <div className="w-full">
