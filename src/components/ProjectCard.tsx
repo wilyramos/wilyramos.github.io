@@ -21,9 +21,9 @@ export default function ProjectCard({ title, description, imageUrl, link }: Proj
 
                     <div className="flex justify-between">
                         <p className="text-sm bg-yellow-500 rounded-xl py-1 px-3 text-white">Javascript</p>
-                        <p className="text-gray-300 text-sm bg-cyan-500 rounded-xl py-1 px-3">React</p>
+                        <p className="text-gray-300 text-sm bg-cyan-600 rounded-xl py-1 px-3">React</p>
                         <p className="text-gray-300 text-sm bg-blue-500 rounded-xl py-1 px-3">Tailwind</p>
-                        <p className="text-gray-300 text-sm bg-green-500 rounded-xl py-1 px-3">MongoDB</p>
+                        <p className="text-gray-300 text-sm bg-green-600 rounded-xl py-1 px-3">MongoDB</p>
                     </div>
 
                     <div className="flex justify-between">
