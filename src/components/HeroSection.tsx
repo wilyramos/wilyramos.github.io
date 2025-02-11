@@ -47,7 +47,7 @@ export default function HeroSection() {
             </div>
 
             {/* Skills Section */}
-            <div className="w-full">
+            <div className="w-full p-1">
               <div className="bg-gray-950 p-6 w-full max-w-lg mx-auto rounded-3xl">
                 <Skills />
               </div>

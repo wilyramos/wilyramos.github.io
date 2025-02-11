@@ -32,7 +32,7 @@ export default function Skills() {
     return (
         <>
             <section className="text-gray-300">
-                <div className="flex gap-3">
+                <div className="max-w-screen-lg mx-auto flex flex-col gap-2">
                     {Object.entries(skills).map(([category, items]) => (
                         <div key={category} className="bg-gray-900 rounded-2xl p-3 shadow-2xl">
                             <h2 className="text-lg mb-4 uppercase">{category}</h2>
