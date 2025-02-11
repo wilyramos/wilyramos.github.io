@@ -8,7 +8,7 @@ const projects = [
 
 export default function Projects() {
     return (
-        <div className="grid mx-10 md:grid-cols-2">
+        <div className="grid mx-10 md:grid-cols-2 place-items-center">
             {projects.map((project, index) => (
                 <ProjectCard key={index} {...project} />
             ))}
