@@ -11,8 +11,8 @@ export default function ProjectCard({ title, description, imageUrl, link }: Proj
     return (
         <>
             <section className="text-gray-600 body-font border-l-4 border-indigo-900 p-2">
-                <div>
-                    <img className="rounded-lg" alt="hero" src={imageUrl} />
+                <div className="flex justify-center">
+                    <img className="h-48 w-80 object-cover" alt="hero" src={imageUrl} />
                 </div>
 
                 <div className="text-gray-600">
