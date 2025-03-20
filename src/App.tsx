@@ -10,8 +10,6 @@ export default function App() {
     <>
       <Router>
         <Principal />
-
-
       </Router>
     </>
   );

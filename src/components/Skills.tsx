@@ -1,54 +1,31 @@
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaDocker, FaGit, FaDatabase, FaGithub, FaCss3, FaPhp } from 'react-icons/fa';
+import {
+    FaJs, FaReact, FaNodeJs, FaDocker, FaGit,
+    FaGithub, FaPhp
+} from "react-icons/fa";
+import {
+    SiTypescript, SiNextdotjs, SiTailwindcss, SiExpress, SiNestjs,
+    SiMongodb, SiMysql, SiPostgresql, SiVercel, SiDigitalocean
+} from "react-icons/si";
 
 const skills = {
-    Frontend: [
-        { name: 'HTML', icon: <FaHtml5 /> },
-        { name: 'CSS', icon: <FaCss3Alt /> },
-        { name: 'JavaScript', icon: <FaJs /> },
-        { name: 'TypeScript', icon: <FaJs />},
-        { name: 'React', icon: <FaReact /> },
-        { name: 'Next.js', icon: <FaReact /> }, // Reusing React icon for Next.js as an example,
-        { name: 'TailwindCSS', icon: <FaCss3 /> }
-    ],
-    Backend: [
-        { name: 'Node.js', icon: <FaNodeJs /> },
-        { name: 'Express', icon: <FaReact /> }, // Reusing React icon for Express as an example
-        { name: 'Php', icon: <FaPhp />},
-        { name: 'MongoDB', icon: <FaDatabase /> },
-        { name: 'MySQL', icon: <FaDatabase /> } // Reusing Database icon for MySQL as an example
-    ],
-    Deployment: [
-        { name: 'Git', icon: <FaGit /> },
-        { name: 'Github', icon: <FaGithub /> },
-        { name: 'Docker', icon: <FaDocker /> },
-
-    ],
-
-
+    "Frontend": [FaJs, SiTypescript, FaReact, SiNextdotjs, SiTailwindcss],
+    "Backend": [FaNodeJs, SiExpress, SiNestjs, FaPhp],
+    "DB & DevOps": [SiMongodb, SiMysql, SiPostgresql, FaGit, FaGithub, FaDocker, SiVercel, SiDigitalocean]
 };
 
 export default function Skills() {
-
     return (
-        <>
-            <section className="text-gray-300">
-                <div className="max-w-screen-lg mx-auto flex flex-col gap-2">
-                    {Object.entries(skills).map(([category, items]) => (
-                        <div key={category} className="bg-gray-900 rounded-2xl p-3 shadow-2xl">
-                            <h2 className="text-lg mb-4 uppercase">{category}</h2>
-                            <div className="flex flex-wrap p-4 gap-4 text-lg font-light">
-                                {items.map((skill) => (
-                                    <div key={skill.name} className="flex items-center text-light hover:-translate-x-3 hover:scale-110 duration-300 hover:text-blue-500">
-                                        <span className="text-3xl mr-2 ">{skill.icon}</span>
-                                        {skill.name}
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    ))}
+        <section className="p-4 space-y-4">
+            {Object.entries(skills).map(([category, icons]) => (
+                <div key={category}>
+                    <h2 className="text-sm font-extrabold text-gray-500">{category}</h2>
+                    <div className="flex flex-wrap gap-3 mt-2">
+                        {icons.map((Icon, i) => (
+                            <Icon key={i} className="text-4xl text-gray-400 hover:text-blue-500 transition-transform hover:scale-105" />
+                        ))}
+                    </div>
                 </div>
-            </section>
-
-        </>
-    )
+            ))}
+        </section>
+    );
 }
