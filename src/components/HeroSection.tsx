@@ -32,9 +32,9 @@ export default function HeroSection() {
     
 
     return (
-        <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-between items-center mx-6 md:m-20 bg-slate-900 text-white rounded-lg shadow-lg">
+        <section className="grid grid-cols-1 md:grid-cols-3 md:px-20 md:py-10 justify-between items-center mx-6 md:m-20 ">
             {/* Simulación de un editor de código */}
-            <div className="mx-2 max-w-xl mt-4 text-left border-l-4 border-gray-600 p-2">
+            <div className="mx-2 max-w-xl mt-4 text-left border-l-4 border-gray-600 p-4">
                 <h1 className="text-xl sm:text-3xl md:text-2xl font-mono mb-4">
                     <span className="text-red-500">import</span> {'{'} <span className="text-gray-200">WilyRamos</span> {'}'} <span className="text-red-500">from</span> <span className="text-yellow-400">'UNMSM';</span>
                 </h1>
@@ -52,8 +52,6 @@ export default function HeroSection() {
                     <span className="text-gray-400">// I am passionate about building apps that make a difference.</span>
 
                 </p>
-                
-            
                 
             </div>
             {/* <Skills /> */}
