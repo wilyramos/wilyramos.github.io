@@ -1,3 +1,4 @@
+import NavMenu from "./NavMenu";
 import SocialMedia from "./SocialMedia";
 import { Link } from "react-router-dom";
 
@@ -16,11 +17,11 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:flex items-center space-x-4">
-          
+
           <Link
             to="/proyectos"
             className="font-medium text-gray-400 border-l-2 pl-2 transition-all duration-300 ease-in-out hover:text-gray-200 hover:border-gray-200"
-            >
+          >
             PROYECTOS
           </Link>
           <Link
@@ -30,14 +31,14 @@ export default function Navbar() {
             SOBRE MI
           </Link>
         </div>
-        
-
-
-
-          <div className="">
-            <SocialMedia />
-          </div>
+        <div className="block md:hidden">
+          <NavMenu />
         </div>
+
+        <div className="hidden md:flex items-center space-x-4">
+          <SocialMedia />
+        </div>
+      </div>
     </nav>
   );
 }

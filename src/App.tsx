@@ -5,8 +5,6 @@ import Layout from './layout/layout'
 import Projects from './components/Project';
 
 
-
-
 export default function App() {
   return (
     <>
