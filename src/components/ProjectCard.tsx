@@ -19,12 +19,28 @@ export default function ProjectCard({ title, description, imageUrl, link }: Proj
                     <h2 className="text-lg  font-medium">{title}</h2>
                     <p className="text-sm">{description}</p>
 
-                    <div className="flex justify-between">
-                        <p className="text-sm bg-yellow-500 rounded-xl py-1 px-3 text-white">Javascript</p>
-                        <p className="text-gray-300 text-sm bg-cyan-600 rounded-xl py-1 px-3">React</p>
-                        <p className="text-gray-300 text-sm bg-blue-500 rounded-xl py-1 px-3">Tailwind</p>
-                        <p className="text-gray-300 text-sm bg-green-600 rounded-xl py-1 px-3">MongoDB</p>
+                    <div className="flex flex-wrap justify-center sm:justify-between text-xs mt-1 gap-1">
+                        <p className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-black rounded-full py-1 px-3">
+                            JavaScript
+                        </p>
+
+                        <p className="bg-gradient-to-r from-red-500 to-red-600 text-white rounded-full py-1 px-3">
+                            NodeJS 🚀
+                        </p>
+
+                        <p className="bg-gradient-to-r from-cyan-500 to-cyan-600 text-white rounded-full py-1 px-3">
+                            React ⚛️
+                        </p>
+
+                        <p className="bg-gradient-to-r from-blue-400 to-blue-500 text-white rounded-full py-1 px-3">
+                            Tailwind 🌊
+                        </p>
+
+                        <p className="bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full py-1 px-3">
+                            MongoDB 🍃
+                        </p>
                     </div>
+
 
                     <div className="flex justify-between">
                         <button className="mt-2 text-white bg-indigo-900 py-2 px-4 hover:bg-indigo-600 rounded text-lg">
