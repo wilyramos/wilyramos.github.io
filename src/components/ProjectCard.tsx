@@ -10,7 +10,7 @@ interface ProjectCardProps {
 export default function ProjectCard({ title, description, imageUrl, link }: ProjectCardProps) {
     return (
         <>
-            <section className="text-gray-600 body-font border-l-4 border-indigo-900 p-2">
+            <section className="text-gray-600 body-font border-t-2 border-slate-800 p-2">
                 <div className="flex justify-center">
                     <img className="h-48 w-80 object-cover rounded-lg shadow-inner " alt="hero" src={imageUrl} />
                 </div>
@@ -37,10 +37,7 @@ export default function ProjectCard({ title, description, imageUrl, link }: Proj
                             demo
                         </button>
                     </div>
-
-
                 </div>
-
             </section>
         </>
     );
