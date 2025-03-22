@@ -16,6 +16,7 @@ const About = () => {
               <br />&nbsp;&nbsp;<span className="text-yellow-400">name</span>: <span className="text-green-400">"System Engineer & Programmer"</span>,
               <br />&nbsp;&nbsp;<span className="text-yellow-400">skills</span>: [<span className="text-green-400">"JavaScript", "TypeScript", "Node.js", "React", "Express", "MongoDB", "TailwindCSS"</span>],
               <br />&nbsp;&nbsp;<span className="text-yellow-400">experience</span>: <span className="text-green-400">"5+ years in software development"</span>,
+                <br />&nbsp;&nbsp;<span className="text-yellow-400">location</span>: <span className="text-green-400">"Peru"</span>,
               <br />&nbsp;&nbsp;<span className="text-yellow-400">passion</span>: <span className="text-green-400">"Building efficient and scalable applications"</span>
               <br />&#125;;
             </code>
