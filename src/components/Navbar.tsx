@@ -25,7 +25,7 @@ export default function Navbar() {
             PROYECTOS
           </Link>
           <Link
-            to="/sobre-mi"
+            to="/about"
             className="font-medium text-gray-400 border-l-2 pl-2 transition-all duration-300 ease-in-out hover:text-gray-200 hover:border-gray-200"
           >
             SOBRE MI
