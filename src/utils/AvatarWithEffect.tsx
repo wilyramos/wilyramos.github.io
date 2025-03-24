@@ -11,7 +11,7 @@ export default function AvatarWithEffect() {
     };
 
     return (
-        <div className="relative flex justify-center items-center m-10" onMouseMove={handleMouseMove}>
+        <div className="relative flex justify-center items-center m-10 pt-4" onMouseMove={handleMouseMove}>
             {/* Fondo animado */}
             <div className="text-sm text-gray-400 font-mono mt-2 ml-4">
                     {/* Comentario tipo código */}
@@ -27,9 +27,9 @@ export default function AvatarWithEffect() {
             <img
                 src="/avatar.svg"
                 alt="Wily Ramos"
-                className="rounded-full shadow-lg transition-transform duration-300"
-                width={300}
-                height={300}
+                className="transition-transform duration-300"
+                width={200}
+                height={200}
             />
         </div>
     );
