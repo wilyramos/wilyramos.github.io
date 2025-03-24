@@ -1,4 +1,6 @@
 import { FaGithub } from "react-icons/fa";
+import { ArrowUpRightIcon } from '@heroicons/react/24/outline'; // O import { LinkIcon } from '@heroicons/react/24/outline';
+
 
 interface ProjectCardProps {
     title: string;
@@ -11,10 +13,27 @@ export default function ProjectCard({ title, description, imageUrl, link }: Proj
     return (
         <>
             <section className="text-gray-600 body-font border-t-2 border-slate-800 p-2">
-                <div className="flex justify-center">
-                    <img className="h-48 w-80 object-cover rounded-lg shadow-inner " alt="hero" src={imageUrl} />
-                </div>
+                <div className="relative flex justify-center">
+                    <img className="h-48 w-80 object-cover rounded-lg shadow-inner" alt="hero" src={imageUrl} />
+                    <div className="absolute inset-0 flex justify-between items-center space-x-4">
 
+
+                        <button className="flex items-center gap-2 text-white py-1 px-4 rounded-full bg-[rgba(5,5,5,0.2)]  hover:bg-[rgba(58,61,66,0.2)] transition-colors duration-200">
+                            <FaGithub className="text-xl" />
+                            <span className="text-sm font-medium">GitHub</span>
+                        </button>
+
+
+                        <button className="flex items-center gap-2 text-white py-1 px-4 rounded-full bg-[rgba(5,5,5,0.2)] hover:bg-[rgba(58,61,66,0.2)] transition-colors duration-200"
+                            onClick={() => window.open(link, '_blank')}
+                        >
+                            <ArrowUpRightIcon className="h-5 w-5" /> {/* O <LinkIcon className="h-5 w-5" /> */}
+                            <span className="text-sm font-medium">Link</span>
+                        </button>
+
+
+                    </div>
+                </div>
                 <div className="text-gray-600">
                     <h2 className="text-lg  font-medium">{title}</h2>
                     <p className="text-sm">{description}</p>
@@ -42,17 +61,7 @@ export default function ProjectCard({ title, description, imageUrl, link }: Proj
                     </div>
 
 
-                    <div className="flex justify-between">
-                        <button className="mt-2 text-white bg-indigo-900 py-2 px-4 hover:bg-indigo-600 rounded text-lg">
-                            <FaGithub />
-                        </button>
-                        <button
-                            className="mt-2 text-white bg-indigo-900 py-2 px-4 hover:bg-indigo-600 rounded text-lg"
-                            onClick={() => window.open(link, '_blank')}
-                        >
-                            demo
-                        </button>
-                    </div>
+
                 </div>
             </section>
         </>
