@@ -2,7 +2,7 @@ import './App.css';
 import { Route, HashRouter as Router, Routes } from 'react-router-dom'; // 👈 Cambia BrowserRouter por HashRouter
 import Principal from './components/principal';
 import Layout from './layout/layout';
-import Projects from './components/Project';
+import Projects from './components/projects/Project';
 import About from './components/About';
 
 export default function App() {
