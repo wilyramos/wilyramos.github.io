@@ -25,7 +25,7 @@ export default function AvatarWithEffect() {
 
             {/* Imagen */}
             <img
-                src="/avatar.svg"
+                src="/avatar.webp"
                 alt="Wily Ramos"
                 className="transition-transform duration-300"
                 width={200}
