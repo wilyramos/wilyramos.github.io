@@ -19,7 +19,7 @@ export default function AvatarWithEffect() {
                 </div>
  
             <div
-                className="absolute w-[100px] h-[320px] bg-gray-800 opacity-30 rounded"
+                className="absolute w-[100px] h-[280px] bg-gray-800 opacity-30 rounded"
                 style={style}
             ></div>
 
