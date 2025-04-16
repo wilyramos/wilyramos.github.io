@@ -6,7 +6,8 @@ const projects = [
         technologies: ['react', 'tailwind', 'mongodb', 'nodejs', 'express', 'typescript']
      },
     
-    { title: 'VisitCalango', description: 'Aplicacion de turismo para el distrito de Calango', imageUrl: '/calango.webp', link: 'https://visitcalango.vercel.app/' }
+    { title: 'VisitCalango', description: 'Aplicacion de turismo para el distrito de Calango', imageUrl: '/calango.webp', link: 'https://visitcalango.vercel.app/' },
+    { title: "SonrisaDigital", description: "Aplicacion para la gestion de citas dentales", imageUrl: "/calango.webp", link: "https://sonrisadigital.vercel.app/", technologies: ["react", "tailwind", "mongodb", "nodejs", "express"] },
 ];
 
 export default function Projects() {
