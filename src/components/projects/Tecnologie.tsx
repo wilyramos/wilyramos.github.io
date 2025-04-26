@@ -17,7 +17,7 @@ interface TecnologieProps {
 
 export default function Tecnologie({ technologies }: TecnologieProps) {
     return (
-        <div className="absolute flex flex-wrap gap-1 top-1/2 text-center justify-center items-center">
+        <div className="flex flex-wrap gap-1 text-center justify-center items-center">
             {technologies?.map((technology, index) => {
                 let logo;
                 switch (technology.toLowerCase()) {

@@ -1,43 +1,46 @@
-import { FaGithub } from "react-icons/fa";
-import { ArrowUpRightIcon } from '@heroicons/react/24/outline'; // O import { LinkIcon } from '@heroicons/react/24/outline';
+import { motion } from "framer-motion";
+import { FaGithub, FaEye } from "react-icons/fa";
 import Tecnologie from "./Tecnologie";
 
 interface ProjectCardProps {
-    title: string;
-    description: string;
-    imageUrl: string;
-    link: string;
-    technologies?: string[];
+	title: string;
+	description: string;
+	imageUrl: string;
+	link: string;
+	technologies?: string[];
 }
 
 export default function ProjectCard({ title, description, imageUrl, link, technologies }: ProjectCardProps) {
-    return (
-        <>
-            <section className="pt-10 mx-auto space-y-4">
-                <div className="relative flex justify-center">
-                    <img className="h-48 w-80 object-cover rounded-xl" alt="hero" src={imageUrl} />
-                    
-                    <div className="absolute grid grid-cols-2 gap-2 bottom-2 right-2">
-                        <button className="flex items-center gap-2 text-white py-1 px-2 rounded-full bg-[rgba(0,0,0,0.6)] hover:bg-[rgba(0,0,0,0.8)] transition-colors duration-200">
-                            <FaGithub className="text-xl" />
-                            <span className="text-sm font-medium">GitHub</span>
-                        </button>
-                        <button
-                            className="flex items-center gap-2 text-white py-1 px-4 rounded-full bg-[rgba(5,5,5,0.6)] hover:bg-[rgba(0,0,0,0.8)] transition-colors duration-200"
-                            onClick={() => window.open(link, '_blank')}
-                        >
-                            <ArrowUpRightIcon className="h-5 w-5" /> {/* O <LinkIcon className="h-5 w-5" /> */}
-                            <span className="text-sm font-medium">Link</span>
-                        </button>
-                    </div>
-
-                    <Tecnologie technologies={technologies} />
-                </div>
-                <div className="">
-                    <h2 className="text-lg font-medium">{title}</h2>
-                    <p className="text-sm">{description}</p>
-                </div>
-            </section>
-        </>
-    );
+	return (
+		<motion.section
+			initial={{ opacity: 0, y: 30 }}
+			whileInView={{ opacity: 1, y: 0 }}
+			transition={{ duration: 0.5, ease: "easeOut" }}
+			viewport={{ once: true }}
+			className="pt-10 mx-auto space-y-4"
+		>
+			<motion.div
+				whileHover={{ scale: 1.03 }}
+				className="relative flex justify-center"
+			>
+				<img className="h-48 w-80 object-cover rounded-xl" alt="hero" src={imageUrl} />
+				<div className="absolute flex justify-between items-center bottom-2 left-2 right-2">
+					<button className="flex items-center gap-2 text-white py-2 px-2 rounded-full bg-[rgba(0,0,0,0.6)] hover:bg-[rgba(0,0,0,0.8)] transition-colors duration-200">
+						<FaGithub className="text-xl" />
+					</button>
+					<button
+						className="flex items-center gap-2 text-white py-2 px-2 rounded-full bg-[rgba(0,0,0,0.6)] hover:bg-[rgba(0,0,0,0.8)] transition-colors duration-200"
+						onClick={() => window.open(link, '_blank')}
+					>
+						<FaEye className="h-5 w-5" />
+					</button>
+				</div>
+			</motion.div>
+			<div>
+				<h2 className="text-lg font-medium text-white">{title}</h2>
+				<p className="text-xs text-gray-300">{description}</p>
+				<Tecnologie technologies={technologies} />
+			</div>
+		</motion.section>
+	);
 }
