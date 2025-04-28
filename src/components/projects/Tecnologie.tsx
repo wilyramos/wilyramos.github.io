@@ -9,6 +9,7 @@ import {
     SiCss3,
     SiGit,
     SiExpress,
+    SiPostgresql
 } from 'react-icons/si';
 
 interface TecnologieProps {
@@ -51,9 +52,13 @@ export default function Tecnologie({ technologies }: TecnologieProps) {
                     case 'express':
                         logo = <SiExpress className="h-5 w-5 text-white" />;
                         break;
+                    case 'postgresql':
+                        logo = <SiPostgresql className="h-5 w-5 text-blue-700" />;
+                        break;  
                     default:
                         logo = <span className="text-white text-sm">{technology}</span>;
                         break;
+
                 }
                 return (
                     <span key={index} className="bg-[rgba(0,0,0)] rounded-lg p-2 flex items-center justify-center">

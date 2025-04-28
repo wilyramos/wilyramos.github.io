@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 import { GoLinkExternal } from "react-icons/go";
-
 import Tecnologie from "./Tecnologie";
 
 interface ProjectCardProps {
@@ -10,40 +9,80 @@ interface ProjectCardProps {
 	imageUrl: string;
 	link: string;
 	technologies?: string[];
+	frontend?: string[];
+	backend?: string[];
+	dataBase?: string[];
 }
 
-export default function ProjectCard({ title, description, imageUrl, link, technologies }: ProjectCardProps) {
+export default function ProjectCard({
+	title,
+	description,
+	imageUrl,
+	link,
+	frontend,
+	backend,
+	dataBase,
+}: ProjectCardProps) {
 	return (
 		<motion.section
 			initial={{ opacity: 0, y: 30 }}
 			whileInView={{ opacity: 1, y: 0 }}
 			transition={{ duration: 0.8, ease: "easeOut" }}
 			viewport={{ once: true }}
-			className="pt-10 mx-auto "
+			className="w-full max-w-sm  mx-auto pt-10"
 		>
 			<motion.div
 				whileHover={{ scale: 1.03 }}
-				className="relative flex flex-col"
+				className="flex flex-col bg-gradient-to-tl from-gray-950 to-gray-900 rounded-xl shadow-lg overflow-hidden"
 			>
-
+				{/* Imagen */}
 				<div className="relative">
-					<img className="h-48 w-80 object-cover rounded-t-xl " alt="hero" src={imageUrl} />
-					<div className="absolute flex justify-between items-center bottom-2 left-2 right-2">
-						<button className="flex items-center gap-2 text-white py-2 px-2 rounded-full bg-[rgba(0,0,0,0.6)] hover:bg-[rgba(0,0,0,0.9)] transition-colors duration-200 hover:text-white">
+					<img
+						className="w-full h-48 object-cover"
+						alt={title}
+						src={imageUrl}
+					/>
+					<div className="absolute bottom-2 left-2 right-2 flex justify-between">
+						<button className="flex items-center gap-2 text-white py-2 px-3 rounded-full bg-black/60 hover:bg-black/90 transition">
 							<FaGithub className="h-5 w-5" />
 						</button>
 						<button
-							className="flex items-center gap-2 text-white py-2 px-2 rounded-full bg-[rgba(0,0,0,0.6)] hover:bg-[rgba(0,0,0,0.8)] transition-colors duration-200 hover:text-blue-500"
-							onClick={() => window.open(link, '_blank')}
+							className="flex items-center gap-2 text-white py-2 px-3 rounded-full bg-black/60 hover:bg-black/80 transition hover:text-blue-400"
+							onClick={() => window.open(link, "_blank")}
 						>
 							<GoLinkExternal className="h-5 w-5" />
 						</button>
 					</div>
 				</div>
-				<div className="bg-gradient-to-tl from-gray-950 to-gray-900 rounded-b-xl shadow-md flex flex-col h-32 gap-2 px-2">
-					<h2 className="text-lg font-medium text-white">{title}</h2>
-					<p className="text-xs text-gray-300">{description}</p>
-					<Tecnologie technologies={technologies} />
+
+				{/* Contenido */}
+				<div className="flex flex-col gap-4 p-4">
+					<div>
+						<h2 className="text-xl font-semibold text-white">{title}</h2>
+						<p className="mt-1 text-sm text-gray-300">{description}</p>
+					</div>
+
+					{/* Tecnologías */}
+					<div className="flex flex-row gap-2 text-white text-xs">
+						{frontend && frontend.length > 0 && (
+							<div>
+								<h3 className="font-medium mb-1">Frontend</h3>
+								<Tecnologie technologies={frontend} />
+							</div>
+						)}
+						{backend && backend.length > 0 && (
+							<div>
+								<h3 className="font-medium mb-1">Backend</h3>
+								<Tecnologie technologies={backend} />
+							</div>
+						)}
+						{dataBase && dataBase.length > 0 && (
+							<div>
+								<h3 className="font-medium mb-1">Database</h3>
+								<Tecnologie technologies={dataBase} />
+							</div>
+						)}
+					</div>
 				</div>
 			</motion.div>
 		</motion.section>
