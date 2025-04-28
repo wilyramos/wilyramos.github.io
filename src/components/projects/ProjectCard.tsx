@@ -38,13 +38,13 @@ export default function ProjectCard({
 				{/* Imagen */}
 				<div className="relative">
 					<img
-						className="w-full h-48 object-cover"
+						className="w-full h-56 object-cover"
 						alt={title}
 						src={imageUrl}
 					/>
 					<div className="absolute bottom-2 left-2 right-2 flex justify-between">
 						<button className="flex items-center gap-2 text-white py-2 px-3 rounded-full bg-black/60 hover:bg-black/90 transition">
-							<FaGithub className="h-5 w-5" />
+							<FaGithub className="h-4 w-4" />
 						</button>
 						<button
 							className="flex items-center gap-2 text-white py-2 px-3 rounded-full bg-black/60 hover:bg-black/80 transition hover:text-blue-400"
