@@ -38,7 +38,7 @@ export default function ProjectCard({
 				{/* Imagen */}
 				<div className="relative">
 					<img
-						className="w-full h-56 object-cover"
+						className="w-full h-44 object-cover"
 						alt={title}
 						src={imageUrl}
 					/>
@@ -47,7 +47,7 @@ export default function ProjectCard({
 							<FaGithub className="h-4 w-4" />
 						</button>
 						<button
-							className="flex items-center gap-2 text-white py-2 px-3 rounded-full bg-black/60 hover:bg-black/80 transition hover:text-blue-400"
+							className="flex items-center gap-2 text-white py-2 px-3 rounded-full bg-black/60 hover:bg-blue-800 transition hover:text-white"
 							onClick={() => window.open(link, "_blank")}
 						>
 							<GoLinkExternal className="h-5 w-5" />
@@ -56,10 +56,10 @@ export default function ProjectCard({
 				</div>
 
 				{/* Contenido */}
-				<div className="flex flex-col gap-4 p-4">
+				<div className="gap-4">
 					<div>
 						<h2 className="text-xl font-semibold text-white">{title}</h2>
-						<p className="mt-1 text-sm text-gray-300">{description}</p>
+						<p className="mt-1 text-sm text-gray-300 text-start pb-2">{description}</p>
 					</div>
 
 					{/* Tecnologías */}
