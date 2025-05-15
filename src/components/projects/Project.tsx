@@ -2,6 +2,7 @@ import ProjectCard from './ProjectCard';
 
 const projects = [
     { title: "SonrisaDigital", description: "Aplicacion para la gestion de citas dentales", imageUrl: "/sonrisadigital3.webp", link: "https://sonrisadigital.vercel.app/", technologies: ["react", "tailwind", "postgresql", "nodejs", "express", "typescript"], frontend: ["react", "tailwind"], backend: ["nodejs", "express"], dataBase: ["postgresql"] },
+    { title: "Store Next", description: "Aplicacion para la gestion de productos y ventas", imageUrl: "/store.webp", link: "https://gostore-one.vercel.app/", technologies: ["react", "tailwind", "mongodb", "nodejs", "express", "typescript"], frontend: ["Next.js"], backend: ["nodejs", "express"], dataBase: ["mongodb"] },
 
     { title: 'SociaLynks', description: 'Crea tu propia pagina centralizada para tus redes sociales', imageUrl: '/socialynks.webp', link: 'https://socialynks.vercel.app/', technologies: ['tailwind', 'mongodb', 'nodejs', 'typescript', "express", "react"], frontend: ["react", "tailwind"], backend: ["nodejs", "express"], dataBase: ["mongodb"] },
     {
