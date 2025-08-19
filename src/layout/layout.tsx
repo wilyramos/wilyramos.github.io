@@ -1,10 +1,10 @@
 import { Outlet } from 'react-router-dom';
-import Navbar from '../components/Navbar';
 import { useCallback } from 'react';
 import Particles from "react-tsparticles";
 import type { Container, Engine } from "tsparticles-engine";
 //import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "tsparticles-slim";
+import SocialMedia from '../components/SocialMedia';
 
 export default function layout() {
 
@@ -101,11 +101,12 @@ export default function layout() {
                     detectRetina: true,
                 }}
             />
-            <div className='bg-gradient-to-b from-slate-950 to-slate-900 text-gray-200 min-h-screen sm:h-screen'>
-                <Navbar />
+            <div className='bg-gradient-to-l from-black to-slate-900 text-white min-h-screen font-nunito'>
+                {/* <Navbar /> */}
                 <Outlet />
-            </div>
+                <SocialMedia />
 
+            </div>
         </div>
     );
 };

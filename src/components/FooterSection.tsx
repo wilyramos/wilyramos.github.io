@@ -1,4 +1,3 @@
-import SocialMedia from "./SocialMedia";
 
 export default function FooterSection() {
 
@@ -21,7 +20,6 @@ export default function FooterSection() {
                     > wily ramos
                     </a>
                 </p>
-                <SocialMedia />
 
             </div>
         </footer>

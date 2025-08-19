@@ -1,27 +1,73 @@
-import ProjectCard from './ProjectCard';
+"use client";
+import { motion } from "framer-motion";
+import ProjectCard from "./ProjectCard";
 
 const projects = [
-    { title: "SonrisaDigital", description: "Aplicacion para la gestion de citas dentales", imageUrl: "/sonrisadigital3.webp", link: "https://sonrisadigital.vercel.app/", technologies: ["react", "tailwind", "postgresql", "nodejs", "express", "typescript"], frontend: ["react", "tailwind"], backend: ["nodejs", "express"], dataBase: ["postgresql"] },
-    { title: "Store Next", description: "Aplicacion para la gestion de productos y ventas", imageUrl: "/store.webp", link: "https://gostore-one.vercel.app/", technologies: ["react", "tailwind", "mongodb", "nodejs", "express", "typescript"], frontend: ["Next.js"], backend: ["nodejs", "express"], dataBase: ["mongodb"] },
-
-    { title: 'SociaLynks', description: 'Crea tu propia pagina centralizada para tus redes sociales', imageUrl: '/socialynks.webp', link: 'https://socialynks.vercel.app/', technologies: ['tailwind', 'mongodb', 'nodejs', 'typescript', "express", "react"], frontend: ["react", "tailwind"], backend: ["nodejs", "express"], dataBase: ["mongodb"] },
+   
     {
-        title: 'Teamly', description: 'Administrador de tus proyectos', imageUrl: '/teamly.webp', link: 'https://teamlyprojects.vercel.app/',
-        technologies: ['react', 'tailwind', 'mongodb', 'nodejs', 'express', 'typescript'], frontend: ["react", "tailwind"], backend: ["nodejs", "express"], dataBase: ["mongodb"]
+        title: "GoPhone - ecommerce",
+        description: "Aplicación de gestión de productos y ventas con panel de administración para un flujo completo de comercio electrónico.",
+        imageUrl: "/store.webp",
+        link: "https://gophone.pe/",
+        frontend: ["Next.js", "TailwindCSS"],
+        backend: ["Node.js", "Express"],
+        database: ["MongoDB"]
     },
-
-    { title: 'VisitCalango', description: 'Aplicacion de turismo para el distrito de Calango', imageUrl: '/calango.webp', link: 'https://visitcalango.vercel.app/', technologies: ['react', 'tailwind', 'mongodb', 'nodejs', 'express', 'typescript'], frontend: ["react", "tailwind"] },
+    {
+        title: "SonrisaDigital",
+        description: "Plataforma web para la gestión de citas odontológicas, que optimiza la atención de pacientes y la administración de especialistas.",
+        imageUrl: "/sonrisadigital3.webp",
+        link: "https://sonrisadigital.vercel.app/",
+        frontend: ["React", "TailwindCSS"],
+        backend: ["Node.js", "Express"],
+        database: ["PostgreSQL"]
+    },
+    {
+        title: "SociaLynks",
+        description: "Crea tu página personalizada para centralizar todas tus redes sociales en un solo enlace.",
+        imageUrl: "/socialynks.webp",
+        link: "https://socialynks.vercel.app/",
+        frontend: ["React", "TailwindCSS"],
+        backend: ["Node.js", "Express"],
+        database: ["MongoDB"]
+    },
+     
+    {
+        title: "Teamly",
+        description: "Administrador de proyectos colaborativo con gestión de tareas y equipos en tiempo real.",
+        imageUrl: "/teamly.webp",
+        link: "https://teamlyprojects.vercel.app/",
+        frontend: ["React", "TailwindCSS"],
+        backend: ["Node.js", "Express"],
+        database: ["MongoDB"]
+    },
 ];
 
 export default function Projects() {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 max-w-5xl mx-auto">
-            {projects.map((project, index) => (
+        <section className="py-12 px-4">
+            <motion.h2
+                initial={{ opacity: 0, y: -30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-3xl font-bold text-center mb-10"
+            >
+                🚀 Proyectos Destacados
+            </motion.h2>
 
-                <ProjectCard
-                    key={index} {...project}
-                />
-            ))}
-        </div>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+                {projects.map((project, index) => (
+                    <motion.div
+                        key={index}
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: index * 0.2, duration: 0.6 }}
+                        whileHover={{ scale: 1.05, y: -5 }}
+                    >
+                        <ProjectCard {...project} />
+                    </motion.div>
+                ))}
+            </div>
+        </section>
     );
 }
