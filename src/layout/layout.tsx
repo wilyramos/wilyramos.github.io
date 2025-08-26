@@ -52,11 +52,11 @@ export default function layout() {
                         },
                         modes: {
                             push: {
-                                quantity: 4,
+                                quantity: 2,
                             },
                             repulse: {
-                                distance: 200,
-                                duration: 0.4,
+                                distance: 100,
+                                duration: 0.8,
                             },
                         },
                     },
@@ -66,7 +66,7 @@ export default function layout() {
                         },
                         links: {
                             color: "#ffffff",
-                            distance: 150,
+                            distance: 100,
                             enable: true,
                             opacity: 0.5,
                             width: 1,

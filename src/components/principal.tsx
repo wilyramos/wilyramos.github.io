@@ -9,10 +9,10 @@ export default function Principal() {
 
 
     return (
-        <div className="scroll-smooth">
+        <div className="scroll-smooth max-w-4xl mx-auto">
 
             <Navbar />
-      <section id="home" className="min-h-screen flex items-center justify-center">
+            <section id="home" className="min-h-screen flex items-center justify-center">
                 <Presentation />
             </section>
 

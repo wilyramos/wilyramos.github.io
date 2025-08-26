@@ -69,29 +69,29 @@ export default function Presentation() {
           "
                 >
                     <span className="text-sky-500">const</span> developer = {"{"}
-                    {"\n"}  <span className="text-purple-400">name</span>:{" "}
-                    <span className="text-emerald-400">"{name}"</span>,
-                    {"\n"}  <span className="text-purple-400">role</span>:{" "}
-                    <span className="text-emerald-400">
+                    {"\n"}  <span className="text-white">name</span>:{" "}
+                    <span className="text-yellow-400">"{name}"</span>,
+                    {"\n"}  <span className="text-white">role</span>:{" "}
+                    <span className="text-yellow-400">
                         "{text}
                         <span className="animate-pulse">|</span>"
                     </span>
                     ,
-                    {"\n"}  <span className="text-purple-400">skills</span>: [
+                    {"\n"}  <span className="text-white">skills</span>: [
                     {skills.map((skill, i) => (
                         <span key={i} className="text-amber-300">
                             "{skill}"{i < skills.length - 1 && ", "}
                         </span>
                     ))}
                     ],
-                    {"\n"}  <span className="text-purple-400">location</span>:{" "}
-                    <span className="text-emerald-400">"Peru"</span>
+                    {"\n"}  <span className="text-white">location</span>:{" "}
+                    <span className="text-yellow-400">"Peru"</span>
                     {"\n"}{"}"}
                 </div>
 
                 {/* Professional description */}
-                <p className="text-gray-400 font-light leading-relaxed text-sm md:text-base lg:text-lg bg-black/20 p-4 md:p-6 rounded-lg text-left max-w-2xl mx-auto">
-          // I am a <span className="text-gray-200">Systems Engineer</span> from{" "}
+                <p className="text-gray-400 leading-relaxed text-sm xs:text-base lg:text-lg bg-black/20 p-4 md:p-6 rounded-lg text-left max-w-2xl mx-auto">
+                    // I am a <span className="text-gray-200">Systems Engineer</span> from{" "}
                     <span className="text-gray-200">UNMSM</span> with experience as a{" "}
                     <span className="text-gray-200">Full Stack Developer</span>.
                     <br />// Passionate about building digital solutions.

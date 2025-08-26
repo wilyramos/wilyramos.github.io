@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 import { GoLinkExternal } from "react-icons/go";
 import Tecnologie from "./Tecnologie";
@@ -8,7 +7,6 @@ interface ProjectCardProps {
 	description: string;
 	imageUrl: string;
 	link: string;
-	technologies?: string[];
 	frontend?: string[];
 	backend?: string[];
 	dataBase?: string[];
@@ -24,67 +22,45 @@ export default function ProjectCard({
 	dataBase,
 }: ProjectCardProps) {
 	return (
-		<motion.section
-			initial={{ opacity: 0, y: 30 }}
-			whileInView={{ opacity: 1, y: 0 }}
-			transition={{ duration: 0.8, ease: "easeOut" }}
-			viewport={{ once: true }}
-			className="w-full max-w-sm  mx-auto pt-10"
-		>
-			<motion.div
-				whileHover={{ scale: 1.03 }}
-				className="flex flex-col bg-gradient-to-tl from-gray-950 to-gray-900 rounded-xl shadow-lg overflow-hidden"
-			>
-				{/* Imagen */}
-				<div className="relative">
-					<img
-						className="w-full h-44 object-cover"
-						alt={title}
-						src={imageUrl}
-					/>
-					<div className="absolute bottom-2 left-2 right-2 flex justify-between">
-						<button className="flex items-center gap-2 text-white py-2 px-3 rounded-full bg-black/60 hover:bg-black/90 transition">
-							<FaGithub className="h-4 w-4" />
-						</button>
-						<button
-							className="flex items-center gap-2 text-white py-2 px-3 rounded-full bg-black/60 hover:bg-blue-800 transition hover:text-white"
-							onClick={() => window.open(link, "_blank")}
-						>
-							<GoLinkExternal className="h-5 w-5" />
-						</button>
-					</div>
+		<div className="w-full max-w-sm mx-auto bg-gray-950 rounded-xl overflow-hidden border border-gray-800 hover:border-gray-700 transition group">
+			{/* Imagen con overlay */}
+			<div className="relative">
+				<img
+					src={imageUrl}
+					alt={title}
+					className="w-full h-44 object-cover group-hover:opacity-80 transition"
+				/>
+				<div className="absolute inset-0 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
+					<button className="p-2 rounded-full bg-black/60 hover:bg-black/80 transition">
+						<FaGithub className="h-5 w-5 text-white" />
+					</button>
+					<button
+						onClick={() => window.open(link, "_blank")}
+						className="p-2 rounded-full bg-blue-600 hover:bg-blue-700 transition"
+					>
+						<GoLinkExternal className="h-5 w-5 text-white" />
+					</button>
 				</div>
+			</div>
 
-				{/* Contenido */}
-				<div className="gap-4">
-					<div>
-						<h2 className="text-xl font-semibold text-white">{title}</h2>
-						<p className="mt-1 text-sm text-gray-300 text-start pb-2">{description}</p>
-					</div>
+			{/* Contenido */}
+			<div className="p-5 space-y-3">
+				<h2 className="text-lg font-semibold text-white">{title}</h2>
+				<p className="text-sm text-gray-400 leading-relaxed">{description}</p>
 
-					{/* Tecnologías */}
-					<div className="flex flex-row gap-2 text-white text-xs">
-						{frontend && frontend.length > 0 && (
-							<div>
-								<h3 className="font-medium mb-1">Frontend</h3>
-								<Tecnologie technologies={frontend} />
-							</div>
-						)}
-						{backend && backend.length > 0 && (
-							<div>
-								<h3 className="font-medium mb-1">Backend</h3>
-								<Tecnologie technologies={backend} />
-							</div>
-						)}
-						{dataBase && dataBase.length > 0 && (
-							<div>
-								<h3 className="font-medium mb-1">Database</h3>
-								<Tecnologie technologies={dataBase} />
-							</div>
-						)}
-					</div>
+				{/* Tecnologías con íconos */}
+				<div className="flex flex-wrap gap-2 mt-3">
+					{frontend?.map((tech, i) => (
+						<Tecnologie key={`fe-${i}`} technologies={[tech]} />
+					))}
+					{backend?.map((tech, i) => (
+						<Tecnologie key={`be-${i}`} technologies={[tech]} />
+					))}
+					{dataBase?.map((tech, i) => (
+						<Tecnologie key={`db-${i}`} technologies={[tech]} />
+					))}
 				</div>
-			</motion.div>
-		</motion.section>
+			</div>
+		</div>
 	);
 }
