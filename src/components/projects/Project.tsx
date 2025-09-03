@@ -4,14 +4,24 @@ import ProjectCard from "./ProjectCard";
 
 const projects = [
     {
-        title: "GoPhone - ecommerce",
+        title: "GoPhone - Ecommerce",
         description:
             " Aplicación integral de e-commerce con gestión de órdenes, POS, pagos en línea (Izipay, Culqi, mercadopago), reportes y automatización de correos; una solución adaptable para cualquier comercio.",
-        imageUrl: "/store.webp",
+        imageUrl: "/gophone.webp",
         link: "https://gophone.pe/",
-        frontend: ["nextjs", "tailwind"],
+        frontend: ["nextjs"],
         backend: ["nodejs", "express"],
         dataBase: ["mongodb"],
+    },
+    {
+        title: "GoGYM - Fitness App",
+        description:
+            "Aplicación web para la gestión de gym con integración de pagos y reportes. Integracion de suscripciones y seguimiento de progreso.",
+        imageUrl: "/gym.webp",
+        link: "https://gogym-pink.vercel.app/",
+        frontend: ["nextjs"],
+        backend: ["nodejs", "nestjs"],
+        dataBase: ["postgresql"],
     },
     {
         title: "SonrisaDigital",
