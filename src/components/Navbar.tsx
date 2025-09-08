@@ -18,7 +18,6 @@ export default function Navbar() {
          } else {
             setShow(true); // mostrar
          }
-
          setLastScrollY(currentScrollY);
       };
 
