@@ -17,6 +17,7 @@ const skills = {
     ],
     "Backend": [
         { Icon: FaNodeJs, color: "#339933" },
+
         { Icon: SiExpress, color: "#FFFFFF" },
         { Icon: SiNestjs, color: "#E0234E" },
     ],

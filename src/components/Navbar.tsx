@@ -6,7 +6,25 @@ import NavMenu from "./NavMenu";
 
 export default function Navbar() {
    const [scrolled, setScrolled] = useState(false);
-   const [active, setActive] = useState("home");
+   const [show, setShow] = useState(true);
+   const [lastScrollY, setLastScrollY] = useState(0);
+
+   useEffect(() => {
+      const handleScroll = () => {
+         const currentScrollY = window.scrollY;
+
+         if (currentScrollY > lastScrollY && currentScrollY > 50) {
+            setShow(false); // ocultar
+         } else {
+            setShow(true); // mostrar
+         }
+
+         setLastScrollY(currentScrollY);
+      };
+
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+   }, [lastScrollY]);
 
    const links = [
       { label: "INICIO", href: "home" },
@@ -15,10 +33,7 @@ export default function Navbar() {
    ];
 
    useEffect(() => {
-      const handleScroll = () => {
-         setScrolled(window.scrollY > 20);
-      };
-
+      const handleScroll = () => setScrolled(window.scrollY > 20);
       window.addEventListener("scroll", handleScroll);
       return () => window.removeEventListener("scroll", handleScroll);
    }, []);
@@ -26,10 +41,11 @@ export default function Navbar() {
    return (
       <motion.nav
          initial={{ y: -80 }}
-         animate={{ y: 0 }}
-         transition={{ duration: 0.6, ease: "easeOut" }}
-         className={`fixed top-4 inset-x-0 mx-auto w-[90%] max-w-3xl z-50 rounded-full shadow-lg backdrop-blur-md  transition-all duration-300 ${scrolled ? "bg-black/90 py-2 max-w-xl" : "bg-black/70 py-4"
-            }`}
+         animate={{ y: show ? 0 : -100 }} // usar show aquí
+         transition={{ duration: 0.5, ease: "easeInOut" }}
+         className={`fixed top-4 inset-x-0 mx-auto w-[90%] max-w-3xl z-50 rounded-full shadow-lg backdrop-blur-md transition-all duration-600 ${
+            scrolled ? "bg-black/90 py-2 max-w-xl" : "bg-black/70 py-4"
+         }`}
       >
          <div className="px-6 flex justify-between items-center">
             {/* Logo */}
@@ -42,7 +58,7 @@ export default function Navbar() {
                   to="home"
                   smooth={true}
                   duration={500}
-                  className="cursor-pointer text-xl font-extrabold text-transparent bg-clip-text text-white"
+                  className="cursor-pointer text-xl font-medium text-transparent bg-clip-text text-white"
                >
                   {`<wilyramos />`}
                </Link>
@@ -57,19 +73,10 @@ export default function Navbar() {
                      smooth={true}
                      duration={500}
                      offset={-200}
-                     onSetActive={() => setActive(link.href)}
-                     className={`cursor-pointer font-medium relative transition-all duration-300 ${active === link.href
-                           ? "text-white"
-                           : "text-gray-300 hover:text-white"
-                        }`}
+                     className="relative cursor-pointer text-white hover:text-gray-300 font-medium"
                   >
                      {link.label}
-                     {active === link.href && (
-                        <motion.span
-                           layoutId="activeLink"
-                           className="absolute -bottom-1 left-0 w-full h-[2px] bg-white rounded-full"
-                        />
-                     )}
+                     <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
                   </Link>
                ))}
             </div>

@@ -66,7 +66,7 @@ export default function Projects() {
                 {projects.map((project, index) => (
                     <div
                         key={index}
-                        className="transition-transform hover:scale-105 hover:-translate-y-1"
+                        className="transition-transform hover:scale-105 hover:-translate-y-1 "
                     >
                         <ProjectCard {...project} />
                     </div>

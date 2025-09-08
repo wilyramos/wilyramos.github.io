@@ -41,7 +41,7 @@ const techConfig: Record<
 
 export default function Tecnologie({ technologies }: TecnologieProps) {
     return (
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 text-2xl">
             {technologies?.map((tech, index) => {
                 const config = techConfig[tech.toLowerCase()];
 

@@ -53,10 +53,10 @@ export default function ProjectCard({
 
 			{/* Contenido */}
 			<div className="p-5 space-y-3">
-				<p className="text-sm text-gray-400 leading-relaxed">{description}</p>
+				<p className="text-sm text-gray-400 leading-relaxed line-clamp-4 min-h-[100px]">{description}</p>
 
 				{/* Tecnologías con íconos */}
-				<div className="flex justify-between px-4 text-center">
+				<div className="flex justify-between px-4 text-center py-2">
 					{frontend?.map((tech, i) => (
 						<Tecnologie key={`fe-${i}`} technologies={[tech]} />
 					))}
