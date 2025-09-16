@@ -8,24 +8,24 @@ import {
 
 const skills = {
     "Frontend": [
-        { Icon: FaJs, color: "#F7DF1E" },
-        { Icon: SiTypescript, color: "#3178C6" },
-        { Icon: FaReact, color: "#61DAFB" },
-        { Icon: SiNextdotjs, color: "#000000" }, // cambia según theme
-        { Icon: SiTailwindcss, color: "#06B6D4" }
+        { Icon: FaJs, color: "#F7DF1E", label: "JavaScript" },
+        { Icon: SiTypescript, color: "#3178C6", label: "TypeScript" },
+        { Icon: FaReact, color: "#61DAFB", label: "React" },
+        { Icon: SiNextdotjs, color: "currentColor", className: "text-gray-900 dark:text-white", label: "Next.js" },
+        { Icon: SiTailwindcss, color: "#06B6D4", label: "Tailwind CSS" }
     ],
     "Backend": [
-        { Icon: FaNodeJs, color: "#339933" },
-        { Icon: SiExpress, color: "#000000" }, // igual se adapta
-        { Icon: SiNestjs, color: "#E0234E" },
+        { Icon: FaNodeJs, color: "#339933", label: "Node.js" },
+        { Icon: SiExpress, color: "currentColor", className: "text-gray-900 dark:text-white", label: "Express" },
+        { Icon: SiNestjs, color: "#E0234E", label: "NestJS" },
     ],
     "DB & DevOps": [
-        { Icon: SiMongodb, color: "#47A248" },
-        { Icon: SiMysql, color: "#4479A1" },
-        { Icon: SiPostgresql, color: "#336791" },
-        { Icon: FaGit, color: "#F05032" },
-        { Icon: FaGithub, color: "#000000" }, // dark/light swap
-        { Icon: SiVercel, color: "#000000" }
+        { Icon: SiMongodb, color: "#47A248", label: "MongoDB" },
+        { Icon: SiMysql, color: "#4479A1", label: "MySQL" },
+        { Icon: SiPostgresql, color: "#336791", label: "PostgreSQL" },
+        { Icon: FaGit, color: "#F05032", label: "Git" },
+        { Icon: FaGithub, color: "currentColor", className: "text-gray-900 dark:text-white", label: "GitHub" },
+        { Icon: SiVercel, color: "currentColor", className: "text-gray-900 dark:text-white", label: "Vercel" }
     ]
 };
 
@@ -44,18 +44,20 @@ export default function Skills() {
                         className="bg-white/70 dark:bg-black/30 backdrop-blur rounded-2xl p-6 shadow-lg transition-colors"
                     >
                         {/* Category title */}
-                        <h2 className="text-lg font-semibold text-gray-700 dark:text-gray-400 mb-6">
+                        <h2 className="text-lg mb-4 font-bold text-gray-700 dark:text-gray-400 text-start">
                             {category}
                         </h2>
 
-                        {/* Icons */}
-                        <div className="flex flex-wrap justify-center gap-6">
-                            {icons.map(({ Icon, color }, i) => (
-                                <Icon
-                                    key={i}
-                                    className="text-4xl transition-transform hover:scale-110"
-                                    color={color}
-                                />
+                        {/* Icons + Labels */}
+                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+                            {icons.map(({ Icon, color, className, label }, i) => (
+                                <div key={i} className="flex flex-col items-center gap-2">
+                                    <Icon
+                                        className={`text-4xl transition-transform hover:scale-110 ${className ?? ""}`}
+                                        color={color}
+                                    />
+                                    <span className="text-xs text-gray-700 dark:text-gray-300 font-light">{label}</span>
+                                </div>
                             ))}
                         </div>
                     </div>

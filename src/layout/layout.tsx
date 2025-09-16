@@ -6,9 +6,18 @@ import { loadSlim } from "tsparticles-slim";
 import SocialMedia from '../components/SocialMedia';
 
 export default function Layout() {
-    const [isDark, setIsDark] = useState<boolean>(
-        document.documentElement.classList.contains("dark")
-    );
+    const [isDark, setIsDark] = useState<boolean>(() => {
+        // Revisar si hay algo guardado en localStorage
+        const saved = localStorage.getItem("theme");
+
+        if (saved) {
+            return saved === "dark";
+        }
+
+        // Si no hay nada guardado, usamos el esquema de color del sistema
+        return window.matchMedia("(prefers-color-scheme: dark)").matches;
+    });
+
 
     // Escuchar cambios de clase en <html> para detectar cuando cambia el theme
     useEffect(() => {

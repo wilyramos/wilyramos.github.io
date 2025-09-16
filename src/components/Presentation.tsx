@@ -91,8 +91,8 @@ export default function Presentation() {
                 </div>
 
                 {/* Professional description */}
-                <p className="leading-relaxed text-sm xs:text-base lg:text-lg 
-                              p-4 md:p-6 rounded-lg text-left max-w-2xl mx-auto
+                <p className="leading-relaxed text-sm shadow-lg xs:text-base lg:text-lg 
+                              p-3 md:p-6 rounded-lg text-left max-w-2xl mx-auto
                               transition-colors duration-500
                               text-gray-600 dark:text-gray-400
                               bg-gray-100/70 dark:bg-black/20">
