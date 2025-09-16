@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaMailBulk, FaWhatsapp } from "react-icons/fa"; // Ejemplo de íconos
+import { FaGithub, FaLinkedin, FaMailBulk, FaWhatsapp } from "react-icons/fa";
 
 export default function SocialMedia() {
     const socialLinks = [
@@ -18,7 +18,7 @@ export default function SocialMedia() {
             label: "WhatsApp",
         },
         {
-            href: "mailto:wily.ramos1@unmsm.edu.pe", // 👈 usa mailto: para abrir el correo
+            href: "mailto:wily.ramos1@unmsm.edu.pe",
             icon: <FaMailBulk />,
             label: "Correo",
         },
@@ -33,13 +33,17 @@ export default function SocialMedia() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={link.label}
-                    className="text-gray-200 hover:text-indigo-600 transition duration-300 text-2xl"
+                    className="
+                        text-gray-800 dark:text-gray-200 
+                        hover:text-indigo-600 dark:hover:text-indigo-400 
+                        transition-colors duration-300 text-2xl
+                    "
                 >
                     {link.icon}
                 </a>
             ))}
 
-            <div className="h-20 text-white border-l-2 border-gray-200" />
+            <div className="h-20 border-l-2 border-gray-800 dark:border-gray-200" />
         </div>
     );
 }

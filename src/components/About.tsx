@@ -3,22 +3,33 @@
 export default function About() {
     return (
         <section className="py-20 px-6 max-w-4xl mx-auto text-center">
-            <h2 className="text-xl sm:text-3xl font-light text-gray-100 mb-12">
+            <h2 className="text-xl sm:text-3xl font-light text-gray-900 dark:text-gray-100 mb-12">
                 {/* About Me */}
             </h2>
 
-            <div className="bg-gray-900 rounded-3xl p-8 md:p-12 text-gray-300 space-y-6 leading-relaxed text-start">
+            <div
+                className="rounded-3xl p-8 md:p-12 
+                           bg-gray-100 text-gray-800 
+                           dark:bg-gray-900 dark:text-gray-300 
+                           space-y-6 leading-relaxed text-start 
+                           shadow-sm dark:shadow-none"
+            >
                 <p>
                     Hi! I’m{" "}
-                    <span className="text-indigo-400 font-semibold">Wily Ramos</span>, a
-                    <strong> Systems Engineering graduate</strong> from{" "}
+                    <span className="text-indigo-600 dark:text-indigo-400 font-semibold">
+                        Wily Ramos
+                    </span>, a <strong>Systems Engineering graduate</strong> from{" "}
                     <strong>Universidad Nacional Mayor de San Marcos</strong>.
                 </p>
                 <p>
                     I specialize in{" "}
                     <strong>Full Stack Development</strong>, creating{" "}
-                    <span className="text-indigo-300">scalable</span> and{" "}
-                    <span className="text-indigo-300">user-friendly</span> applications.
+                    <span className="text-indigo-500 dark:text-indigo-300">scalable</span>{" "}
+                    and{" "}
+                    <span className="text-indigo-500 dark:text-indigo-300">
+                        user-friendly
+                    </span>{" "}
+                    applications.
                 </p>
                 <p>
                     I have worked on projects involving{" "}
@@ -27,7 +38,7 @@ export default function About() {
                 </p>
                 <p>
                     I’m currently{" "}
-                    <span className="font-semibold text-green-400">
+                    <span className="font-semibold text-green-600 dark:text-green-400">
                         open to new opportunities
                     </span>{" "}
                     — from freelance work to long-term projects.

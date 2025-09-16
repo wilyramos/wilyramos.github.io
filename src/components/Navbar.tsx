@@ -1,35 +1,11 @@
 "use client";
 import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
-import { motion } from "framer-motion";
 import NavMenu from "./NavMenu";
+import ThemeToggleButton from "../utils/ThemeToggleButton";
 
 export default function Navbar() {
    const [scrolled, setScrolled] = useState(false);
-   const [show, setShow] = useState(true);
-   const [lastScrollY, setLastScrollY] = useState(0);
-
-   useEffect(() => {
-      const handleScroll = () => {
-         const currentScrollY = window.scrollY;
-
-         if (currentScrollY > lastScrollY && currentScrollY > 50) {
-            setShow(false); // ocultar
-         } else {
-            setShow(true); // mostrar
-         }
-         setLastScrollY(currentScrollY);
-      };
-
-      window.addEventListener("scroll", handleScroll);
-      return () => window.removeEventListener("scroll", handleScroll);
-   }, [lastScrollY]);
-
-   const links = [
-      { label: "INICIO", href: "home" },
-      { label: "PROYECTOS", href: "projects" },
-      { label: "SOBRE MI", href: "about" },
-   ];
 
    useEffect(() => {
       const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -37,31 +13,30 @@ export default function Navbar() {
       return () => window.removeEventListener("scroll", handleScroll);
    }, []);
 
+   const links = [
+      { label: "PROYECTOS", href: "projects" },
+      { label: "SOBRE MI", href: "about" },
+   ];
+
    return (
-      <motion.nav
-         initial={{ y: -80 }}
-         animate={{ y: show ? 0 : -100 }} // usar show aquí
-         transition={{ duration: 0.5, ease: "easeInOut" }}
-         className={`fixed top-4 inset-x-0 mx-auto w-[90%] max-w-3xl z-50 rounded-full shadow-lg backdrop-blur-md transition-all duration-600 ${
-            scrolled ? "bg-black/90 py-2 max-w-xl" : "bg-black/70 py-4"
-         }`}
+      <nav
+         className={`fixed top-4 inset-x-0 mx-auto w-[92%] max-w-4xl z-50 
+         rounded-full shadow-lg backdrop-blur-md transition-all duration-500 
+         ${scrolled
+               ? "bg-white/90 dark:bg-black/90 py-2 max-w-3xl"
+               : "bg-white/70 dark:bg-black/70 py-4"
+            }`}
       >
          <div className="px-6 flex justify-between items-center">
             {/* Logo */}
-            <motion.div
-               whileHover={{ scale: 1.1 }}
-               whileTap={{ scale: 0.95 }}
-               transition={{ type: "spring", stiffness: 200 }}
+            <Link
+               to="home"
+               smooth={true}
+               duration={500}
+               className="cursor-pointer text-xl font-medium text-black dark:text-white hover:opacity-80 transition-colors"
             >
-               <Link
-                  to="home"
-                  smooth={true}
-                  duration={500}
-                  className="cursor-pointer text-xl font-medium text-transparent bg-clip-text text-white"
-               >
-                  {`<wilyramos />`}
-               </Link>
-            </motion.div>
+               {`<wilyramos />`}
+            </Link>
 
             {/* Links Desktop */}
             <div className="hidden md:flex items-center space-x-6 text-sm">
@@ -71,13 +46,18 @@ export default function Navbar() {
                      to={link.href}
                      smooth={true}
                      duration={500}
-                     offset={-200}
-                     className="relative cursor-pointer text-white hover:text-gray-300 font-medium"
+                     offset={-100}
+                     className="relative cursor-pointer text-black dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition-colors group"
                   >
                      {link.label}
-                     <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
+                     <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-black dark:bg-white transition-all group-hover:w-full"></span>
                   </Link>
                ))}
+            </div>
+
+            {/* Botón de theme */}
+            <div className="hidden md:block">
+               <ThemeToggleButton />
             </div>
 
             {/* Mobile Menu */}
@@ -85,6 +65,6 @@ export default function Navbar() {
                <NavMenu />
             </div>
          </div>
-      </motion.nav>
+      </nav>
    );
 }
