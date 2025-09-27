@@ -3,7 +3,8 @@ import {
 } from "react-icons/fa";
 import {
     SiTypescript, SiNextdotjs, SiTailwindcss, SiExpress, SiNestjs,
-    SiMongodb, SiMysql, SiPostgresql, SiVercel
+    SiMongodb, SiMysql, SiPostgresql, SiVercel,
+    SiDocker
 } from "react-icons/si";
 
 const skills = {
@@ -25,7 +26,8 @@ const skills = {
         { Icon: SiPostgresql, color: "#336791", label: "PostgreSQL" },
         { Icon: FaGit, color: "#F05032", label: "Git" },
         { Icon: FaGithub, color: "currentColor", className: "text-gray-900 dark:text-white", label: "GitHub" },
-        { Icon: SiVercel, color: "currentColor", className: "text-gray-900 dark:text-white", label: "Vercel" }
+        { Icon: SiVercel, color: "currentColor", className: "text-gray-900 dark:text-white", label: "Vercel" },
+        { Icon: SiDocker, color: "#2496ED", className: "text-gray-900 dark:text-white", label: "Docker" },
     ]
 };
 
