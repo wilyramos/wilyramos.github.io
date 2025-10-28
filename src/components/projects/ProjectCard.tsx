@@ -43,7 +43,7 @@ export default function ProjectCard({
 
 				<div className="absolute bottom-0 left-0 right-0 
                                 bg-gradient-to-t from-black/70 to-transparent p-2">
-					<h2 className="text-lg font-semibold text-white leading-tight drop-shadow-2xl">
+					<h2 className="text-lg font text-white drop-shadow-2xl">
 						{title}
 					</h2>
 				</div>

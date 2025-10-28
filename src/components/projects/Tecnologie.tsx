@@ -12,6 +12,7 @@ import {
     SiPostgresql,
     SiNextdotjs,
     SiNestjs,
+    SiAngular,
 } from "react-icons/si";
     
 
@@ -37,6 +38,7 @@ const techConfig: Record<
     postgresql: { icon: <SiPostgresql />, className: "text-blue-700" },
     nextjs: { icon: <SiNextdotjs />, className: "text-white" },
     nestjs: { icon: <SiNestjs />, className: "text-white" },
+    angular: { icon: <SiAngular />, className: "text-red-600" },
 };
 
 export default function Tecnologie({ technologies }: TecnologieProps) {
