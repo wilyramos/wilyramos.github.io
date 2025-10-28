@@ -1,15 +1,16 @@
 import {
-    FaJs, FaReact, FaNodeJs, FaGit, FaGithub
+    FaJs, FaReact, FaNodeJs, FaGit, FaGithub, FaAngular
 } from "react-icons/fa";
 import {
     SiTypescript, SiNextdotjs, SiTailwindcss, SiExpress, SiNestjs,
     SiMongodb, SiMysql, SiPostgresql, SiVercel,
-    SiDocker
-} from "react-icons/si";
+    SiDocker, SiAzuredevops, SiAmazon
+} from "react-icons/si"
 
 const skills = {
     "Frontend": [
         { Icon: FaJs, color: "#F7DF1E", label: "JavaScript" },
+        { Icon: FaAngular, color: "#DD0031", label: "Angular" },
         { Icon: SiTypescript, color: "#3178C6", label: "TypeScript" },
         { Icon: FaReact, color: "#61DAFB", label: "React" },
         { Icon: SiNextdotjs, color: "currentColor", className: "text-gray-900 dark:text-white", label: "Next.js" },
@@ -28,13 +29,14 @@ const skills = {
         { Icon: FaGithub, color: "currentColor", className: "text-gray-900 dark:text-white", label: "GitHub" },
         { Icon: SiVercel, color: "currentColor", className: "text-gray-900 dark:text-white", label: "Vercel" },
         { Icon: SiDocker, color: "#2496ED", className: "text-gray-900 dark:text-white", label: "Docker" },
+        { Icon: SiAzuredevops, color: "#0078D4", label: "Microsoft Azure" },
+        { Icon: SiAmazon, color: "#FF9900", label: "AWS" } // <- usar SiAmazon
     ]
 };
 
 export default function Skills() {
     return (
         <section className="px-4 sm:px-6 lg:px-8 py-12 text-center">
-            {/* Title adaptado */}
             <h2 className="text-xl sm:text-2xl font-light text-gray-900 dark:text-gray-100 mb-12">
                 Skills & Technologies
             </h2>
@@ -45,12 +47,10 @@ export default function Skills() {
                         key={category}
                         className="bg-white/70 dark:bg-black/30 backdrop-blur rounded-2xl p-6 shadow-lg transition-colors"
                     >
-                        {/* Category title */}
                         <h2 className="text-lg mb-4 font-bold text-gray-700 dark:text-gray-400 text-start">
                             {category}
                         </h2>
 
-                        {/* Icons + Labels */}
                         <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
                             {icons.map(({ Icon, color, className, label }, i) => (
                                 <div key={i} className="flex flex-col items-center gap-2">
