@@ -15,6 +15,17 @@ const projects = [
         dataBase: ["mongodb"],
     },
     {
+        title: "BALENS - Tienda de Moda",
+        description:
+            "Plataforma de e-commerce especializada en moda, que ofrece una experiencia de compra personalizada y recomendaciones de estilo.",
+        imageUrl: "/balens.jpg",
+        link: "https://ecommerce-angular-frontend.web.app/",
+        githuburl: "https://github.com/wilyramos/ecommerce_angular_frontend",
+        frontend: ["angular"],
+        backend: ["nodejs", "nestjs"],
+        dataBase: ["mongodb"],
+    },
+    {
         title: "GoGYM - Fitness App",
         description:
             "Aplicación web para la gestión de gym con integración de pagos y reportes. Integración de suscripciones y seguimiento de progreso.",
