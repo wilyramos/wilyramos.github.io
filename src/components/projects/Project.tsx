@@ -19,7 +19,7 @@ const projects = [
         description:
             "Plataforma de e-commerce especializada en moda, que ofrece una experiencia de compra personalizada y recomendaciones de estilo.",
         imageUrl: "/balens.jpg",
-        link: "https://ecommerce-angular-frontend.web.app/",
+        link: "https://storebalens.web.app/",
         githuburl: "https://github.com/wilyramos/ecommerce_angular_frontend",
         frontend: ["angular"],
         backend: ["nodejs", "nestjs"],
