@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function Presentation() {
     const name = "Wily Ramos";
     const roles = ["Full Stack Developer", "React Specialist", "Systems Engineer"];
-    const skills = ["Next.js", "React", "Node.js", "TypeScript", "NestJS"];
+    const skills = ["Next.js", "React", "Node.js", "TypeScript", "NestJS", "Angular", "Python", "Express"];
 
     const [text, setText] = useState("");
     const [isDeleting, setIsDeleting] = useState(false);
@@ -59,7 +59,7 @@ export default function Presentation() {
                     className="
                         rounded-xl 
                         p-4 md:p-6 
-                        text-xs sm:text-sm md:text-base lg:text-lg 
+                        text-xs sm:text-sm md:text-base 
                         font-mono 
                         mb-8 
                         text-left 
@@ -80,7 +80,7 @@ export default function Presentation() {
                     ,
                     {"\n"}  <span className="text-gray-900 dark:text-white">skills</span>: [
                     {skills.map((skill, i) => (
-                        <span key={i} className="text-amber-600 dark:text-amber-300">
+                        <span key={i} className="text-amber-400 dark:text-amber-300">
                             "{skill}"{i < skills.length - 1 && ", "}
                         </span>
                     ))}

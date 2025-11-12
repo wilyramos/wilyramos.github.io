@@ -58,17 +58,6 @@ const projects = [
         backend: ["nodejs", "express"],
         dataBase: ["mongodb"],
     },
-    {
-        title: "Teamly",
-        description:
-            "Administrador de proyectos colaborativo con gestión de tareas y equipos en tiempo real.",
-        imageUrl: "/teamly.webp",
-        link: "https://teamlyprojects.vercel.app/",
-        githuburl: "https://github.com/wilyramos",
-        frontend: ["react", "tailwind"],
-        backend: ["nodejs", "express"],
-        dataBase: ["mongodb"],
-    },
 ];
 
 export default function Projects() {
