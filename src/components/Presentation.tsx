@@ -41,20 +41,14 @@ export default function Presentation() {
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
-                className="w-full max-w-5xl text-center transition-colors duration-500 
-                           text-gray-800 dark:text-gray-200"
+                className="w-full max-w-5xl text-center transition-colors duration-500 text-gray-800 dark:text-gray-200"
             >
-                {/* Greeting */}
-                <p className="text-sm sm:text-base mb-3">
-                    {"// Hi there 👋, my name is"}
-                </p>
+                <p className="text-sm sm:text-base mb-3">// Hi there 👋, my name is</p>
 
-                {/* Name */}
                 <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6">
                     {name}
                 </h1>
 
-                {/* Code block */}
                 <div
                     className="
                         rounded-xl 
@@ -68,34 +62,32 @@ export default function Presentation() {
                         mx-auto
                         whitespace-pre-wrap break-words
                         transition-colors duration-500
-                        bg-gray-100 dark:bg-black/40
+
+                        bg-[#1e1e1e] text-[#d4d4d4]
+                        border border-[#3c3c3c]
                     "
                 >
-                    <span className="text-sky-600 dark:text-sky-500">const</span> developer = {"{"}
-                    {"\n"}  <span className="text-gray-900 dark:text-white">role</span>:{" "}
-                    <span className="text-yellow-600 dark:text-yellow-400">
+                    <span className="text-[#569cd6]">const</span>{" "}
+                    <span className="text-[#9cdcfe]">developer</span> = {"{"}
+                    {"\n"}  <span className="text-[#9cdcfe]">role</span>:{" "}
+                    <span className="text-[#ce9178]">
                         "{text}
                         <span className="animate-pulse">|</span>"
                     </span>
                     ,
-                    {"\n"}  <span className="text-gray-900 dark:text-white">skills</span>: [
+                    {"\n"}  <span className="text-[#9cdcfe]">skills</span>: [
                     {skills.map((skill, i) => (
-                        <span key={i} className="text-amber-400 dark:text-amber-300">
+                        <span key={i} className="text-[#ce9178]">
                             "{skill}"{i < skills.length - 1 && ", "}
                         </span>
                     ))}
                     ],
-                    {"\n"}  <span className="text-gray-900 dark:text-white">location</span>:{" "}
-                    <span className="text-yellow-600 dark:text-yellow-400">"Peru"</span>
+                    {"\n"}  <span className="text-[#9cdcfe]">location</span>:{" "}
+                    <span className="text-[#ce9178]">"Peru"</span>
                     {"\n"}{"}"}
                 </div>
 
-                {/* Professional description */}
-                <p className="leading-relaxed text-sm shadow-lg xs:text-base lg:text-lg 
-                              p-3 md:p-6 rounded-lg text-left max-w-2xl mx-auto
-                              transition-colors duration-500
-                              text-gray-600 dark:text-gray-400
-                              bg-gray-100/70 dark:bg-black/20">
+                <p className="leading-relaxed text-sm shadow-lg xs:text-base lg:text-lg p-3 md:p-6 rounded-lg text-left max-w-2xl mx-auto transition-colors duration-500 text-gray-600 dark:text-gray-400 bg-gray-100/70 dark:bg-black/20">
                     // I am a <span className="text-gray-800 dark:text-gray-200">Systems Engineer</span> from{" "}
                     <span className="text-gray-800 dark:text-gray-200">UNMSM</span> with experience as a{" "}
                     <span className="text-gray-800 dark:text-gray-200">Full Stack Developer</span>.

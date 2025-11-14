@@ -1,45 +1,45 @@
 import {
-  FaJs, FaReact, FaNodeJs, FaGit, FaGithub, FaAngular, FaAws
+    FaJs, FaReact, FaNodeJs, FaGit, FaGithub, FaAngular, FaAws
 } from "react-icons/fa";
 import {
-  SiTypescript, SiNextdotjs, SiTailwindcss, SiExpress, SiNestjs,
-  SiMongodb, SiMysql, SiPostgresql, SiVercel,
-  SiDocker, SiMicrosoftazure
+    SiTypescript, SiNextdotjs, SiTailwindcss, SiExpress, SiNestjs,
+    SiMongodb, SiMysql, SiPostgresql, SiVercel,
+    SiDocker, SiMicrosoftazure
 } from "react-icons/si";
 
 // Si prefieres usar FaAws para AWS (recomendado), sustituye el uso de SiAmazon/SiAmazonaws por FaAws
 const skills = {
-  "Frontend": [
-    { Icon: FaJs, color: "#F7DF1E", label: "JavaScript" },
-    { Icon: FaAngular, color: "#DD0031", label: "Angular" },
-    { Icon: SiTypescript, color: "#3178C6", label: "TypeScript" },
-    { Icon: FaReact, color: "#61DAFB", label: "React" },
-    { Icon: SiNextdotjs, color: "currentColor", className: "text-gray-900 dark:text-white", label: "Next.js" },
-    { Icon: SiTailwindcss, color: "#06B6D4", label: "Tailwind CSS" }
-  ],
-  "Backend": [
-    { Icon: FaNodeJs, color: "#339933", label: "Node.js" },
-    { Icon: SiExpress, color: "currentColor", className: "text-gray-900 dark:text-white", label: "Express" },
-    { Icon: SiNestjs, color: "#E0234E", label: "NestJS" },
-  ],
-  "DB & DevOps": [
-    { Icon: SiMongodb, color: "#47A248", label: "MongoDB" },
-    { Icon: SiMysql, color: "#4479A1", label: "MySQL" },
-    { Icon: SiPostgresql, color: "#336791", label: "PostgreSQL" },
-    { Icon: FaGit, color: "#F05032", label: "Git" },
-    { Icon: FaGithub, color: "currentColor", className: "text-gray-900 dark:text-white", label: "GitHub" },
-    { Icon: SiVercel, color: "currentColor", className: "text-gray-900 dark:text-white", label: "Vercel" },
-    { Icon: SiDocker, color: "#2496ED", label: "Docker" },
-    { Icon: SiMicrosoftazure, color: "#0078D4", label: "Azure" },
-    // usar FaAws para evitar el error de exportación
-    { Icon: FaAws, color: "#FF9900", label: "AWS" }
-  ]
+    "Frontend": [
+        { Icon: FaJs, color: "#F7DF1E", label: "JavaScript" },
+        { Icon: FaAngular, color: "#DD0031", label: "Angular" },
+        { Icon: SiTypescript, color: "#3178C6", label: "TypeScript" },
+        { Icon: FaReact, color: "#61DAFB", label: "React" },
+        { Icon: SiNextdotjs, color: "currentColor", className: "text-gray-900 dark:text-white", label: "Next.js" },
+        { Icon: SiTailwindcss, color: "#06B6D4", label: "Tailwind CSS" }
+    ],
+    "Backend": [
+        { Icon: FaNodeJs, color: "#339933", label: "Node.js" },
+        { Icon: SiExpress, color: "currentColor", className: "text-gray-900 dark:text-white", label: "Express" },
+        { Icon: SiNestjs, color: "#E0234E", label: "NestJS" },
+    ],
+    "DB & DevOps": [
+        { Icon: SiMongodb, color: "#47A248", label: "MongoDB" },
+        { Icon: SiMysql, color: "#4479A1", label: "MySQL" },
+        { Icon: SiPostgresql, color: "#336791", label: "PostgreSQL" },
+        { Icon: FaGit, color: "#F05032", label: "Git" },
+        { Icon: FaGithub, color: "currentColor", className: "text-gray-900 dark:text-white", label: "GitHub" },
+        { Icon: SiVercel, color: "currentColor", className: "text-gray-900 dark:text-white", label: "Vercel" },
+        { Icon: SiDocker, color: "#2496ED", label: "Docker" },
+        { Icon: SiMicrosoftazure, color: "#0078D4", label: "Azure" },
+        // usar FaAws para evitar el error de exportación
+        { Icon: FaAws, color: "#FF9900", label: "AWS" }
+    ]
 };
 
 
 export default function Skills() {
     return (
-        <section className="px-4 sm:px-6 lg:px-8 py-12 text-center">
+        <section className="px-4 sm:px-6 lg:px-8 py-10 text-center">
             <h2 className="text-xl sm:text-2xl font-light text-gray-900 dark:text-gray-100 mb-12">
                 Skills & Technologies
             </h2>
@@ -48,7 +48,7 @@ export default function Skills() {
                 {Object.entries(skills).map(([category, icons]) => (
                     <div
                         key={category}
-                        className="bg-white/70 dark:bg-black/30 backdrop-blur rounded-2xl p-6 shadow-lg transition-colors"
+                        className="bg-white/70 dark:bg-black/30 backdrop-blur rounded-2xl p-4 shadow-lg transition-colors"
                     >
                         <h2 className="text-base mb-4 text-gray-700 dark:text-gray-400 text-start">
                             {category}
