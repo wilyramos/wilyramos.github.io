@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Presentation() {
     const name = "Wily Ramos";
-    const roles = ["Full Stack Developer", "React Specialist", "Systems Engineer"];
+    const roles = ["Full Stack Developer", "Systems Engineer"];
     const skills = ["Next.js", "React", "Node.js", "TypeScript", "NestJS", "Angular", "Python", "Express"];
 
     const [text, setText] = useState("");
