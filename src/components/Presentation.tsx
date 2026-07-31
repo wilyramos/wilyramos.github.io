@@ -45,7 +45,6 @@ export default function Presentation() {
                 className="w-full max-w-5xl text-center transition-colors duration-500 text-gray-800 dark:text-gray-200"
             >
                 <p className="text-sm sm:text-base mb-3">// Hi there 👋, my name is</p>
-
                 <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6">
                     {name}
                 </h1>
