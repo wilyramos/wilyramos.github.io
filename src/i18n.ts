@@ -97,7 +97,7 @@ const resources = {
       },
       presentation: {
         hi: "// Hola 👋, mi nombre es",
-        roleText: "Ingeniero de Sistemas de la UNMSM trabajando como Data Developer AWS en Indra (BBVA). Enfocado en el procesamiento de datos y la creación de pipelines escalables en la nube con S3, SageMaker y contenedores."
+        roleText: "Ingeniero de Sistemas de la UNMSM con experiencia en desarrollo full stack, procesamiento de datos y arquitecturas cloud en AWS. Especializado en construir aplicaciones de extremo a extremo y pipelines escalables con S3, SageMaker y contenedores."
       },
       experience: {
         title: "Experiencia Laboral",
@@ -169,7 +169,7 @@ const resources = {
       about: {
         title: "Sobre Mí",
         p1: "¡Hola! Soy <1>Wily Ramos</1>, egresado de <3>Ingeniería de Sistemas</3> de la <5>Universidad Nacional Mayor de San Marcos</5>.",
-        p2: "Cuento con sólida experiencia en <1>desarrollo backend y bases de datos</1>, especialmente en los sectores financiero y asegurador trabajando para empresas como <3>Mapfre (Grupo Indra)</3>. Me especializo en construir soluciones robustas usando <5>Java, Spring Boot, Oracle PL/SQL</5> y frontends modernos.",
+        p2: "Cuento con sólida experiencia en <1>desarrollo backend y bases de datos</1>, especialmente en los sectores financiero y asegurador para grandes empresas. Me especializo en construir soluciones robustas usando <5>Java, Spring Boot, Oracle PL/SQL</5> y frontends modernos.",
         p3: "Mi objetivo profesional actual es desarrollarme en el rol de <1>Data Engineer / Data Developer</1> en la nube. Estoy expandiendo activamente mi experiencia en <3>Python, preprocesamiento de datos, orquestación y servicios cloud de AWS</3> para diseñar pipelines de datos de extremo a extremo.",
         p4: "Soy autodidacta, adaptable y siempre <1>abierto a nuevos retos</1> que me permitan aprovechar mi experiencia full stack dentro del ecosistema de ingeniería de datos."
       }
@@ -270,7 +270,7 @@ const resources = {
       },
       presentation: {
         hi: "// Hi there 👋, my name is",
-        roleText: "Systems Engineer from UNMSM working as a Data Developer AWS at Indra (BBVA). Focused on processing data, building scalable cloud pipelines with S3, SageMaker, and containers."
+        roleText: "Systems Engineer from UNMSM with experience in full stack development, data processing, and AWS cloud architectures. Specialized in building end-to-end applications and scalable cloud data pipelines with S3, SageMaker, and containers."
       },
       experience: {
         title: "Work Experience",
@@ -342,7 +342,7 @@ const resources = {
       about: {
         title: "About Me",
         p1: "Hi! I’m <1>Wily Ramos</1>, a <3>Systems Engineering graduate</3> from <5>Universidad Nacional Mayor de San Marcos</5>.",
-        p2: "I have solid experience in <1>backend development and databases</1>, specifically within the financial and insurance sectors working for companies like <3>Mapfre (Indra Group)</3>. I specialize in building robust solutions using <5>Java, Spring Boot, Oracle PL/SQL</5>, and modern frontends.",
+        p2: "I have solid experience in <1>backend development and databases</1>, specifically within the financial and insurance sectors for major companies. I specialize in building robust solutions using <5>Java, Spring Boot, Oracle PL/SQL</5>, and modern frontends.",
         p3: "My current professional objective is to transition into a <1>Data Engineer / Data Developer</1> role in the cloud. I am actively expanding my expertise in <3>Python, data preprocessing, orchestration, and AWS cloud services</3> to design end-to-end data pipelines.",
         p4: "I am highly self-taught, adaptable, and always <1>open to new challenges</1> that allow me to leverage my full stack background into the data engineering ecosystem."
       }
