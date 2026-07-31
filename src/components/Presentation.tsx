@@ -49,7 +49,6 @@ export default function Presentation() {
                 <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6">
                     {name}
                 </h1>
-
                 <div
                     className="
                         rounded-xl 
