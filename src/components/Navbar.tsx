@@ -1,11 +1,14 @@
 "use client";
 import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
+import { useTranslation } from "react-i18next";
 import NavMenu from "./NavMenu";
 import ThemeToggleButton from "../utils/ThemeToggleButton";
+import LanguageToggleButton from "../utils/LanguageToggleButton"; // 👈 Importación del botón
 
 export default function Navbar() {
    const [scrolled, setScrolled] = useState(false);
+   const { t } = useTranslation();
 
    useEffect(() => {
       const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -14,8 +17,8 @@ export default function Navbar() {
    }, []);
 
    const links = [
-      { label: "PROYECTOS", href: "projects" },
-      { label: "SOBRE MI", href: "about" },
+      { label: t("nav.projects"), href: "projects" },
+      { label: t("nav.about"), href: "about" },
    ];
 
    return (
@@ -28,7 +31,6 @@ export default function Navbar() {
             }`}
       >
          <div className="px-6 flex justify-between items-center">
-            {/* Logo */}
             <Link
                to="home"
                smooth={true}
@@ -38,7 +40,6 @@ export default function Navbar() {
                {`<wilyramos />`}
             </Link>
 
-            {/* Links Desktop */}
             <div className="hidden md:flex items-center space-x-6 text-sm">
                {links.map((link) => (
                   <Link
@@ -55,12 +56,12 @@ export default function Navbar() {
                ))}
             </div>
 
-            {/* Botón de theme */}
-            <div className="hidden md:block">
+            {/* Contenedor con Theme y Cambiador de Idioma */}
+            <div className="hidden md:flex items-center space-x-3">
                <ThemeToggleButton />
+               <LanguageToggleButton />
             </div>
 
-            {/* Mobile Menu */}
             <div className="block md:hidden">
                <NavMenu />
             </div>
