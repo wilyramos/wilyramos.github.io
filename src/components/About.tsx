@@ -1,10 +1,11 @@
+// About.jsx
 "use client";
 
 export default function About() {
     return (
         <section className="py-20 px-6 max-w-4xl mx-auto text-center">
             <h2 className="text-xl sm:text-3xl font-light text-gray-900 dark:text-gray-100 mb-12">
-                {/* About Me */}
+                About Me
             </h2>
 
             <div
@@ -22,26 +23,18 @@ export default function About() {
                     <strong>Universidad Nacional Mayor de San Marcos</strong>.
                 </p>
                 <p>
-                    I specialize in{" "}
-                    <strong>Full Stack Development</strong>, creating{" "}
-                    <span className="text-indigo-500 dark:text-indigo-300">scalable</span>{" "}
-                    and{" "}
-                    <span className="text-indigo-500 dark:text-indigo-300">
-                        user-friendly
-                    </span>{" "}
-                    applications.
+                    I have solid experience in <strong>backend development and databases</strong>, specifically within the financial and insurance sectors working for companies like <strong>Mapfre (Indra Group)</strong>. I specialize in building robust solutions using{" "}
+                    <span className="text-indigo-500 dark:text-indigo-300">Java, Spring Boot, Oracle PL/SQL</span>, and modern frontends.
                 </p>
                 <p>
-                    I have worked on projects involving{" "}
-                    <strong>web platforms, APIs, and modern frontends</strong>, always
-                    focusing on clean code and best practices.
+                    My current professional objective is to transition into a <strong>Data Engineer / Data Developer</strong> role in the cloud. I am actively expanding my expertise in <strong>Python, data preprocessing, orchestration, and AWS cloud services</strong> to design end-to-end data pipelines.
                 </p>
                 <p>
-                    I’m currently{" "}
+                    I am highly self-taught, adaptable, and always{" "}
                     <span className="font-semibold text-green-600 dark:text-green-400">
-                        open to new opportunities
+                        open to new challenges
                     </span>{" "}
-                    — from freelance work to long-term projects.
+                    that allow me to leverage my full stack background into the data engineering ecosystem.
                 </p>
             </div>
         </section>

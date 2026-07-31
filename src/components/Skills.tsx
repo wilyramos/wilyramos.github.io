@@ -1,41 +1,41 @@
+// Skills.jsx
 import {
-    FaJs, FaReact, FaNodeJs, FaGit, FaGithub, FaAngular, FaAws
+    FaJs, FaReact, FaNodeJs, FaGit, FaGithub, FaAngular, FaAws, FaJava, FaPython
 } from "react-icons/fa";
 import {
     SiTypescript, SiNextdotjs, SiTailwindcss, SiExpress, SiNestjs,
-    SiMongodb, SiMysql, SiPostgresql, SiVercel,
-    SiDocker, SiMicrosoftazure
+    SiMongodb, SiMysql, SiPostgresql, SiVercel, SiDocker, SiSpringboot, SiOracle
 } from "react-icons/si";
 
-// Si prefieres usar FaAws para AWS (recomendado), sustituye el uso de SiAmazon/SiAmazonaws por FaAws
 const skills = {
     "Frontend": [
         { Icon: FaJs, color: "#F7DF1E", label: "JavaScript" },
-        { Icon: FaAngular, color: "#DD0031", label: "Angular" },
         { Icon: SiTypescript, color: "#3178C6", label: "TypeScript" },
+        { Icon: FaAngular, color: "#DD0031", label: "Angular" },
         { Icon: FaReact, color: "#61DAFB", label: "React" },
         { Icon: SiNextdotjs, color: "currentColor", className: "text-gray-900 dark:text-white", label: "Next.js" },
         { Icon: SiTailwindcss, color: "#06B6D4", label: "Tailwind CSS" }
     ],
-    "Backend": [
+    "Backend & Data": [
+        { Icon: FaPython, color: "#3776AB", label: "Python" },
+        { Icon: FaJava, color: "#007396", label: "Java" },
+        { Icon: SiSpringboot, color: "#6DB33F", label: "Spring Boot" },
         { Icon: FaNodeJs, color: "#339933", label: "Node.js" },
-        { Icon: SiExpress, color: "currentColor", className: "text-gray-900 dark:text-white", label: "Express" },
         { Icon: SiNestjs, color: "#E0234E", label: "NestJS" },
+        { Icon: SiExpress, color: "currentColor", className: "text-gray-900 dark:text-white", label: "Express" }
     ],
-    "DB & DevOps": [
-        { Icon: SiMongodb, color: "#47A248", label: "MongoDB" },
-        { Icon: SiMysql, color: "#4479A1", label: "MySQL" },
+    "Cloud, DB & DevOps": [
+        { Icon: FaAws, color: "#FF9900", label: "AWS" },
+        { Icon: SiDocker, color: "#2496ED", label: "Docker" },
+        { Icon: SiOracle, color: "#F80000", label: "Oracle PL/SQL" },
         { Icon: SiPostgresql, color: "#336791", label: "PostgreSQL" },
+        { Icon: SiMysql, color: "#4479A1", label: "MySQL" },
+        { Icon: SiMongodb, color: "#47A248", label: "MongoDB" },
         { Icon: FaGit, color: "#F05032", label: "Git" },
         { Icon: FaGithub, color: "currentColor", className: "text-gray-900 dark:text-white", label: "GitHub" },
-        { Icon: SiVercel, color: "currentColor", className: "text-gray-900 dark:text-white", label: "Vercel" },
-        { Icon: SiDocker, color: "#2496ED", label: "Docker" },
-        { Icon: SiMicrosoftazure, color: "#0078D4", label: "Azure" },
-        // usar FaAws para evitar el error de exportación
-        { Icon: FaAws, color: "#FF9900", label: "AWS" }
+        { Icon: SiVercel, color: "currentColor", className: "text-gray-900 dark:text-white", label: "Vercel" }
     ]
 };
-
 
 export default function Skills() {
     return (
@@ -44,24 +44,24 @@ export default function Skills() {
                 Skills & Technologies
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 {Object.entries(skills).map(([category, icons]) => (
                     <div
                         key={category}
-                        className="bg-white/70 dark:bg-black/30 backdrop-blur rounded-2xl p-4 shadow-lg transition-colors"
+                        className="bg-white/70 dark:bg-black/30 backdrop-blur rounded-2xl p-6 shadow-lg transition-colors"
                     >
-                        <h2 className="text-base mb-4 text-gray-700 dark:text-gray-400 text-start">
+                        <h2 className="text-base mb-6 font-semibold text-gray-800 dark:text-gray-200 text-start border-b border-gray-200 dark:border-gray-700 pb-2">
                             {category}
                         </h2>
 
-                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+                        <div className="grid grid-cols-3 gap-y-8 gap-x-4">
                             {icons.map(({ Icon, color, className, label }, i) => (
-                                <div key={i} className="flex flex-col items-center gap-2">
+                                <div key={i} className="flex flex-col items-center justify-center gap-2">
                                     <Icon
                                         className={`text-4xl transition-transform hover:scale-110 ${className ?? ""}`}
                                         color={color}
                                     />
-                                    <span className="text-xs text-gray-700 dark:text-gray-300 font-light">{label}</span>
+                                    <span className="text-xs text-center text-gray-700 dark:text-gray-300 font-medium">{label}</span>
                                 </div>
                             ))}
                         </div>

@@ -1,3 +1,4 @@
+// ProjectCard.tsx
 import { FaGithub } from "react-icons/fa";
 import { GoLinkExternal } from "react-icons/go";
 import { motion } from "framer-motion";
@@ -6,7 +7,7 @@ interface ProjectCardProps {
 	title: string;
 	description: string;
 	imageUrl: string;
-	link: string;
+	link?: string;
 	githuburl?: string;
 
 	frontend?: string[];
@@ -34,14 +35,15 @@ export default function ProjectCard({
 	date,
 	status,
 }: ProjectCardProps) {
+	const hasButtons = Boolean(githuburl || link);
+
 	return (
 		<motion.div
 			whileHover={{ y: -5 }}
 			transition={{ duration: 0.3 }}
-			className="group relative w-full max-w-sm mx-auto dark:bg-gray-950
-			rounded-2xl "
+			className="group relative w-full max-w-sm mx-auto dark:bg-gray-950 rounded-2xl"
 		>
-			<div className="relative h-56 overflow-hidden">
+			<div className="relative h-56 overflow-hidden rounded-t-2xl">
 				<img
 					src={imageUrl}
 					alt={title}
@@ -54,10 +56,11 @@ export default function ProjectCard({
 
 						{status && (
 							<span
-								className={`text-xs px-2 py-1 rounded-full font-medium ${status === "Completed"
+								className={`text-xs px-2 py-1 rounded-full font-medium ${
+									status === "Completed"
 										? "bg-emerald-600 text-white"
 										: "bg-amber-500 text-white"
-									}`}
+								}`}
 							>
 								{status}
 							</span>
@@ -65,22 +68,28 @@ export default function ProjectCard({
 					</div>
 				</div>
 
-				<div className="absolute inset-0 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
-					{githuburl && (
-						<button
-							onClick={() => window.open(githuburl, "_blank")}
-							className="p-2 rounded-full bg-black/70 hover:bg-black/90 transition"
-						>
-							<FaGithub className="h-5 w-5 text-white" />
-						</button>
-					)}
-					<button
-						onClick={() => window.open(link, "_blank")}
-						className="p-2 rounded-full bg-black/70 hover:bg-black/90 transition"
-					>
-						<GoLinkExternal className="h-5 w-5 text-white" />
-					</button>
-				</div>
+				{hasButtons && (
+					<div className="absolute inset-0 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
+						{githuburl && (
+							<button
+								onClick={() => window.open(githuburl, "_blank")}
+								className="p-2 rounded-full bg-black/70 hover:bg-black/90 transition"
+								aria-label="GitHub Repository"
+							>
+								<FaGithub className="h-5 w-5 text-white" />
+							</button>
+						)}
+						{link && (
+							<button
+								onClick={() => window.open(link, "_blank")}
+								className="p-2 rounded-full bg-black/70 hover:bg-black/90 transition"
+								aria-label="External Link"
+							>
+								<GoLinkExternal className="h-5 w-5 text-white" />
+							</button>
+						)}
+					</div>
+				)}
 			</div>
 
 			<div className="p-5 space-y-2">
@@ -104,10 +113,8 @@ export default function ProjectCard({
 					)}
 				</div>
 				<div className="text-sm text-gray-700 dark:text-gray-300">
-
 					<table className="w-full text-left">
 						<tbody className="divide-y divide-gray-200 dark:divide-gray-800">
-
 							{frontend && frontend.length > 0 && (
 								<tr>
 									<td className="font-semibold py-1.5 w-32">Frontend</td>
@@ -135,12 +142,9 @@ export default function ProjectCard({
 									<td className="opacity-80 py-1.5 text-xs">{infra.join(", ")}</td>
 								</tr>
 							)}
-
 						</tbody>
 					</table>
-
 				</div>
-
 			</div>
 		</motion.div>
 	);

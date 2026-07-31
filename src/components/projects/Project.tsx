@@ -1,3 +1,4 @@
+// Projects.tsx
 "use client";
 
 import ProjectCard from "./ProjectCard";
@@ -6,59 +7,113 @@ const projects = [
 	{
 		title: "GoPhone - Ecommerce",
 		description:
-			"Aplicación completa de e-commerce con catálogo dinámico, checkout optimizado, POS integrado, procesadores de pago (Izipay, Culqi, MercadoPago), panel administrativo, reportes y flujos automatizados.",
-		imageUrl: "/gophone.webp",
+			"Aplicación completa de e-commerce con catálogo dinámico, checkout optimizado, POS integrado, procesadores de pago (Izipay, Culqi, MercadoPago), panel administrativo, reportes PDF y envío de correos automatizados.",
+		imageUrl: "https://res.cloudinary.com/dof0z9tt5/image/upload/v1785519659/Captura_de_pantalla_2026-07-31_124052_jowsvh.png",
 		link: "https://gophone.pe/",
 		githuburl: "https://github.com/wilyramos/ecommerce_nextjs_ts_frontend",
-
 		frontend: [
-			"Next.js",
+			"Next.js 15",
+			"React 19",
+			"TypeScript",
+			"TailwindCSS 4",
+			"Zustand",
+			"Radix UI",
+			"MercadoPago SDK"
+		],
+		backend: [
+			"Node.js",
+			"Express 5",
+			"REST API",
+			"Mongoose",
+			"JWT Auth",
+			"Nodemailer / Resend",
+			"Node-cron"
+		],
+		dataBase: ["MongoDB"],
+		infra: [
+			"Cloudinary",
+			"Vercel",
+			"GitHub Actions (CI/CD)"
+		],
+	},
+	{
+		title: "NeoShop Importaciones",
+		description:
+			"Aplicación completa de e-commerce con integración de pasarelas de pago (MercadoPago), notificaciones transaccionales por correo automatizadas, panel administrativo y flujos completos de compra.",
+		imageUrl: "https://res.cloudinary.com/dof0z9tt5/image/upload/v1785519446/Captura_de_pantalla_2026-07-31_122311_uv8d3n.png",
+		link: "https://www.neoshopimportaciones.com/",
+		frontend: [
+			"Next.js 15",
 			"TypeScript",
 			"TailwindCSS",
-			"Server Components",
-			"SEO Optimization",
+			"Zustand",
+			"Radix UI"
 		],
-
 		backend: [
 			"Node.js",
 			"Express",
 			"REST API",
 			"JWT Auth",
-			"Webhook Handlers",
+			"Resend",
+			"Cloudinary"
 		],
-
 		dataBase: ["MongoDB"],
-
 		infra: [
-			"Cloudinary",
 			"Vercel",
-			"GitHub Actions (CI/CD)",
+			"GitHub Actions"
 		],
 	},
-
+	{
+		title: "SYC Mobile",
+		description:
+			"Plataforma de comercio electrónico con catálogo dinámico, procesamiento de pagos seguro, envío de correos automatizados, generación de códigos QR y gestión administrativa.",
+		imageUrl: "https://res.cloudinary.com/dof0z9tt5/image/upload/v1785519446/Captura_de_pantalla_2026-07-31_122334_erpffn.png",
+		link: "https://sycmobile.pe/",
+		frontend: [
+			"Next.js 15",
+			"TypeScript",
+			"TailwindCSS",
+			"React Hook Form",
+			"Zod"
+		],
+		backend: [
+			"Node.js",
+			"Express",
+			"REST API",
+			"JWT",
+			"Nodemailer",
+			"PDFKit"
+		],
+		dataBase: ["MongoDB"],
+		infra: [
+			"Cloudinary",
+			"Vercel"
+		],
+	},
 	{
 		title: "BALENS - Tienda de Moda",
 		description:
 			"E-commerce especializado en moda, con sistema de productos variables, panel administrativo, filtros avanzados y diseño totalmente personalizado.",
 		imageUrl: "/balens.jpg",
-		link: "https://storebalens.web.app/",
 		githuburl: "https://github.com/wilyramos/ecommerce_angular_frontend",
-
 		frontend: [
 			"Angular",
 			"TypeScript",
 			"SCSS",
-			"Firebase Hosting",
-			"Reactive Forms",
+			"Reactive Forms"
 		],
-
-		backend: ["Node.js", "NestJS", "Cloud Functions"],
-
+		backend: [
+			"Node.js",
+			"NestJS",
+			"Cloud Functions"
+		],
 		dataBase: ["MongoDB"],
-
-		infra: ["Firebase Auth", "Firebase Storage", "Firebase Functions", "GitHub Actions", "AWS S3"],
+		infra: [
+			"Firebase Hosting",
+			"Firebase Storage",
+			"AWS S3"
+		],
 	},
-
 	{
 		title: "GoGYM - Fitness App",
 		description:
@@ -66,51 +121,35 @@ const projects = [
 		imageUrl: "/gym.webp",
 		link: "https://gogym-pink.vercel.app/",
 		githuburl: "https://github.com/wilyramos/backend_gym_nestjs",
-
 		frontend: ["Next.js", "TypeScript", "TailwindCSS"],
-
 		backend: ["Node.js", "NestJS", "REST API"],
-
 		dataBase: ["PostgreSQL", "Prisma"],
-
 		infra: ["Vercel", "Railway", "GitHub Actions"],
 	},
-
 	{
 		title: "SonrisaDigital",
 		description:
 			"Plataforma para la gestión de citas odontológicas con agenda de especialistas, historial clínico y notificaciones automáticas.",
 		imageUrl: "/sonrisadigital3.webp",
 		link: "https://sonrisadigital.vercel.app/",
-		githuburl:
-			"https://github.com/wilyramos/sonrisadigital_react_ts_frontend",
-
+		githuburl: "https://github.com/wilyramos/sonrisadigital_react_ts_frontend",
 		frontend: ["React", "TypeScript", "TailwindCSS"],
-
 		backend: ["Node.js", "Express", "Mailer Service"],
-
 		dataBase: ["PostgreSQL", "Prisma"],
-
 		infra: ["Vercel", "Railway", "SMTP Provider"],
 	},
-
 	{
 		title: "SociaLynks",
 		description:
 			"Aplicación que permite crear una tarjeta digital personalizable para centralizar enlaces sociales, estilo Linktree.",
 		imageUrl: "/socialynks.webp",
 		link: "https://socialynks.vercel.app/",
-		githuburl:
-			"https://github.com/wilyramos/socialynks_express_frontend",
-
+		githuburl: "https://github.com/wilyramos/socialynks_express_frontend",
 		frontend: ["React", "TypeScript", "TailwindCSS"],
-
 		backend: ["Node.js", "Express"],
-
 		dataBase: ["MongoDB"],
-
 		infra: ["Vercel", "Railway"],
-	},
+	}
 ];
 
 export default function Projects() {
@@ -124,8 +163,7 @@ export default function Projects() {
 				{projects.map((project, index) => (
 					<div
 						key={index}
-						className="transition-transform hover:scale-105 hover:-translate-y-1
-								   bg-white dark:bg-black/40 rounded-xl shadow-lg overflow-hidden"
+						className="transition-transform hover:scale-105 hover:-translate-y-1 bg-white dark:bg-black/40 rounded-xl shadow-lg overflow-hidden"
 					>
 						<ProjectCard {...project} />
 					</div>

@@ -1,17 +1,18 @@
+// Presentation.jsx
 "use client";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 export default function Presentation() {
     const name = "Wily Ramos";
-    const roles = ["Full Stack Developer", "Systems Engineer"];
-    const skills = ["Next.js", "React", "Node.js", "TypeScript", "NestJS", "Angular", "Python", "Express"];
+    const skills = ["AWS (S3, SageMaker, EC2)", "Python", "Containers", "PL/SQL", "Next.js", "Java", "Node.js", "TypeScript"];
 
     const [text, setText] = useState("");
     const [isDeleting, setIsDeleting] = useState(false);
     const [loopNum, setLoopNum] = useState(0);
 
     useEffect(() => {
+        const roles = ["Data Developer AWS", "Cloud Engineer", "Full Stack Developer"];
         const currentRole = roles[loopNum % roles.length];
         const fullText = currentRole;
 
@@ -33,7 +34,7 @@ export default function Presentation() {
 
         const typingInterval = setInterval(handleTyping, isDeleting ? 80 : 120);
         return () => clearInterval(typingInterval);
-    }, [text, isDeleting, loopNum, roles]);
+    }, [text, isDeleting, loopNum]);
 
     return (
         <section className="flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 lg:py-24">
@@ -62,7 +63,6 @@ export default function Presentation() {
                         mx-auto
                         whitespace-pre-wrap break-words
                         transition-colors duration-500
-
                         bg-[#1e1e1e] text-[#d4d4d4]
                         border border-[#3c3c3c]
                     "
@@ -83,15 +83,15 @@ export default function Presentation() {
                     ))}
                     ],
                     {"\n"}  <span className="text-[#9cdcfe]">location</span>:{" "}
-                    <span className="text-[#ce9178]">"Peru"</span>
+                    <span className="text-[#ce9178]">"Lima, Peru"</span>
                     {"\n"}{"}"}
                 </div>
 
                 <p className="leading-relaxed text-sm shadow-lg xs:text-base lg:text-lg p-3 md:p-6 rounded-lg text-left max-w-2xl mx-auto transition-colors duration-500 text-gray-600 dark:text-gray-400 bg-gray-100/70 dark:bg-black/20">
                     // I am a <span className="text-gray-800 dark:text-gray-200">Systems Engineer</span> from{" "}
-                    <span className="text-gray-800 dark:text-gray-200">UNMSM</span> with experience as a{" "}
-                    <span className="text-gray-800 dark:text-gray-200">Full Stack Developer</span>.
-                    <br />// Passionate about building digital solutions.
+                    <span className="text-gray-800 dark:text-gray-200">UNMSM</span> working as a{" "}
+                    <span className="text-gray-800 dark:text-gray-200">Data Developer AWS at Indra (BBVA)</span>.
+                    <br />// Focused on processing data, building scalable cloud pipelines with S3, SageMaker, and containers.
                 </p>
             </motion.div>
         </section>
